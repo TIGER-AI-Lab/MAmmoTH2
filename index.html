@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>MAmmoTH</title>
+    <link rel="icon" type="image/x-icon" href="static/images/mammoth_icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="static/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="static/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">🦣 MAmmoTH2: <br>Scaling Instructions from the Web</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                <sup>♢</sup><a href="https://xiangyue9607.github.io/" target="_blank">Xiang Yue</a>,</span>
+                            <span class="author-block">
+                  <sup>♣</sup><a href="https://scholar.google.com/citations?hl=zh-CN&user=hty-MWIAAAAJ" target="_blank">Tuney Zheng</a>,
+                            <span class="author-block">
+                    <sup>♠</sup><a href="https://scholar.google.com/citations?user=qyTrq4kAAAAJ&hl=en" target="_blank">Ge Zhang</a>,
+                            <span class="author-block">
+                    <sup>♠</sup><a href="https://wenhuchen.github.io/" target="_blank">Wenhu Chen</a>
+                  </span>
+                        </div>
+
+
+
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                        <sup>♢</sup>Carnegie Mellon University,
+                        <sup>♠</sup>University of Waterloo
+                        <br>
+                    <!-- <span class="eql-cntrb"><small><sup>*</sup>Xiang Yue and Wenhu Chen are the leading authors of the project. They contributed equally to this project.</small></span> -->
+                            <span class="author-block"><a href="mailto:xyue2@andrew.cmu.edu">xyue2@andrew.cmu.edu</a>
+                      , <a href="mailto:wenhuchen@uwaterloo.ca">wenhuchen@uwaterloo.ca</a> </span>
+
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                          <a href="https://huggingface.co/datasets/TIGER-Lab/MathInstruct" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            🤗
+                          </span>
+                                <span>Dataset</span>
+                                </a>
+                                </span>
+
+                                <!-- Supplementary PDF link -->
+                                <span class="link-block">
+                        <a href="https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-7B" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          🤗
+                        </span>
+                                <span>Models</span>
+                                </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                      <a href="https://github.com/TIGER-AI-Lab/MAmmoTH" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                                <span>Code</span>
+                                </a>
+                                </span>
+
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2309.05653.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                                <span>arXiv</span>
+                                </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Paper abstract -->
+   <!-- Paper Abstract Section -->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Instruction tuning improves the reasoning abilities of large language models
+(LLMs), with data quality and scalability being the crucial factors. Most instruction
+tuning data come from human crowd-sourcing or GPT-4 distillation. We propose a
+paradigm to efficiently harvest 10 million naturally existing instruction data from
+the pre-training web corpus to enhance LLM reasoning. Our approach involves
+(1) recalling relevant documents, (2) extracting instruction-response pairs, and (3)
+refining the extracted pairs using open-source LLMs. Fine-tuning base LLMs on
+this dataset, we build MAmmoTH2 models, which significantly boost performance on
+reasoning benchmarks. Notably, MAmmoTH2-7B’s (Mistral) performance increases
+from 11% to 34% on MATH and from 36% to 67% on GSM8K without training
+on any in-domain data. Further training MAmmoTH2 on public instruction tuning
+datasets yields MAmmoTH2-Plus, achieving state-of-the-art performance on several
+reasoning and chatbot benchmarks. Our work demonstrates how to harvest large-
+scale, high-quality instruction data without costly human annotation or GPT-4
+distillation, providing a new perspective on building better instruction tuning data.                        </p>
+
+<p>
+    <!-- Image1 carousel -->
+        
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                            <img src="static\images\teaser_front.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                            <h2 class="subtitle" style="font-size: 16px; text-align: center; color: #888888;font-weight: normal;">
+                                Figure 1: Overview of MAmmoTH2-Plus results. The MAmmoTH2-8x7B-Plus variant outperforms Mixtral-Instruct on reasoning benchmarks, matching Qwen-1.5-110B with only 13% active parame-ters. It also surpasses Mixtral-Instruct by around 10 points on general code and chatbot benchmarks.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End image1 carousel -->
+    
+    <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Paper Abstract Section -->
+
+
+
+
+
+<!--begining introduction-->
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!-- Added inline style for right alignment -->
+                    <h2 class="title is-3" style="text-align: left;">1  Introduction</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Reasoning is a fundamental aspect of human cognition and problem-solving [Clark et al., 2018,
+Hendrycks et al., 2021a, Cobbe et al., 2021, Hendrycks et al., 2021b, Rein et al., 2023]. Proficiency in
+reasoning is essential for advancing scientific knowledge, developing new technologies, and making
+informed decisions in various contexts. Recently, large language models (LLMs) [Brown et al., 2020,
+Ouyang et al., 2022, Touvron et al., 2023a,b, Achiam et al., 2023, Team et al., 2023] have shown
+remarkable progress in various NLP tasks. However, their ability to perform complex reasoning
+tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering is still limited.
+
+                        </p>
+<p>
+<!-- Image2 carousel -->
+    
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="item">
+                        <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                        <img src="static/images/teaser.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                        <h2 class="subtitle" style="font-size: 16px; text-align: center; color: #888888;font-weight: normal;">
+                            Figure 2: Comparison between our dataset curation method and previous studies.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End image2 carousel -->
+
+<p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!-- Removed the title section -->
+                    <div class="content has-text-justified">
+                        <p>
+                            Recent studies have extensively explored different approaches to enhance LLMs’ reasoning abilities
+after pre-training. The two main approaches are continued training and instruction tuning. Continued
+training focuses on training LLMs with language model loss on large-scale math or science-centric
+documents [Lewkowycz et al., 2022, Taylor et al., 2022, Azerbayev et al., 2023, Shao et al., 2024,
+Ying et al., 2024] recalled from the general web corpus. Instruction tuning, on the other hand, seeks
+to employ supervised fine-tuning loss on curated high-quality instruction-response pairs [Ouyang
+et al., 2022, Chung et al., 2024]. While human-annotated instruction datasets [Cobbe et al., 2021,
+Hendrycks et al., 2021b, Amini et al., 2019] are often limited in scale, recent studies [Yu et al., 2023,
+Yue et al., 2023, Tosh et al., 2024, Li et al., 2024, Tang et al., 2024] attempt to prompt state-of-the-
+art models like GPT-4 with seed data to synthesize large-scale instruction datasets. However, the
+synthesized instruction data becomes highly biased towards the seed data distribution and is prone to
+a high degree of hallucination.<p>
+<p>
+To address these limitations, we propose to discover naturally existing instruction data from
+the web. We argue that the web corpus (e.g., Common Crawl) already contains a vast amount of
+high-quality instruction data that can enhance LLM reasoning. For example, textbooks, exams,
+educational resources, and forums on the web contain a wealth of instruction-following pairs across
+various domains like math, science, engineering, and humanities. We believe such readily available
+instruction data is not only diverse but also of high quality. However, such instruction data is highly
+dispersed across the corpus, which makes it particularly challenging to discover.<p>
+<p>    
+In this paper, we aim to mine these instruction-response pairs from the web using a three-step pipeline.
+(1) Recall step: We create a diverse seed dataset by crawling several quiz websites. We use this
+seed data to train a fastText model [Joulin et al., 2016] and employ it to recall documents from
+Common Crawl [Computer, 2023]. GPT-4 is used to trim down the recalled documents by their root
+URL. We obtain 18M documents through this step. (2) Extract step: We utilize open-source LLMs
+like Mixtral [Jiang et al., 2024] to extract Q-A pairs from these documents, producing roughly 5M
+candidate Q-A pairs. (3) Refine step: After extraction, we further employ Mixtral-8×7B [Jiang et al.,
+2024] and Qwen-72B [Bai et al., 2023] to refine [Zheng et al., 2024b] these candidate Q-A pairs. This
+refinement operation aims to remove unrelated content, fix formality, and add missing explanations
+to the candidate Q-A pairs. This refinement operation is pivotal to maintaining the quality of the
+mined Q-A pairs. Eventually, we harvest a total of 10M instruction-response pairs through these
+steps. Unlike existing instruction-tuning dataset, our dataset WEBINSTRUCT is purely mined from
+the Web without any human crowdsourcing or GPT-4 distillation.<p>
+<p>
+To validate the effectiveness of our WEBINSTRUCT, we train MAmmoTH2, a family of open-sourced
+language models that are trained on a variety of base models, including Mistral-7B, Llama3-8B,
+Mixtral-8×7B, and Yi-34B. Our experiments demonstrate the effectiveness of scaling up instruction
+tuning on science reasoning tasks. On a range of held-out reasoning benchmarks including Theo-
+remQA, GSM8K, MATH, ARC-C, MMLU-STEM, GPQA and BBH, MAmmoTH2 exhibits remarkably
+better reasoning abilities compared to the base model. MAmmoTH2 boosts the performance of the base
+model significantly. For example, MAmmoTH2-7B boosts the performance of Mistral-7B by 5-31%
+across different datasets, while MAmmoTH2-34B boosts the Yi-34B base model by 6-24% across
+different datasets. Notably, WEBINSTRUCT does not contain any data from any of the evaluation
+benchmarks, highlighting the strong generalization of the instruction-tuned model. These findings
+reveal new perspectives on how to construct high-quality instruction dataset in scale without requiring
+crowdsourcing or distillation.   </p>
+<p>
+<!-- Image3 carousel -->
+    
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="item">
+                        <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                        <img src="static\images\combined.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                        <h2 class="subtitle" style="font-size: 16px; text-align: center; color: #888888;font-weight: normal;">
+                            Figure 3: Step 1: Recall relevant documents from Common Crawl. Step 2: Extracting Q-A pairs.
+Step 3: Refine with the extracted Q-A pairs.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End image3 carousel -->
+
+<p>    
+    <p>
+        <!-- Image4 carousel -->
+            
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column is-four-fifths">
+                            <div class="item">
+                                <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                                <img src="static\images\example.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                                <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
+                                    Figure 4: An illustrating example from WEBINSTRUCT for the extraction and refine step
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End image4 carousel -->
+        
+        <p> 
+<p>  
+    To further enhance the performance of MAmmoTH2 on more general code generation, math rea-
+    soning and instruction-following tasks, we continue to tune it on several open-source instruction
+    datasets including OpenHermes2.5, Code-Feedback, Math-plus. The further enhanced model is
+    named MAmmoTH2-Plus, which exhibits strong performance across these general tasks. For example,
+    MAmmoTH2-7B-Plus achieves top performance on HumanEval and MBPP code generation bench-
+    marks, and MAmmoTH2-8×7B leads the AlpacaEval 2.0 and Arena Hard leaderboards for general
+    language understanding and instruction-following. The consistent gain of MAmmoTH2-Plus over the
+    official instruct models (e.g. Mixtral-Instruct-v0.1) further validates the effectiveness of our dataset
+    and training approach.         
+
+
+<p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--end begining introduction-->
+<!--begining WEBINSTRUCT-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!-- Added inline style for right alignment -->
+                    <h2 class="title is-3" style="text-align: left;">2 WEBINSTRUCT</h2>
+                    
+                    <div class="content has-text-justified">
+                        <p>
+                            In this section, we outline the process of constructing WEBINSTRUCT from the web corpus. Specif-
+                            ically, we divide the data collection pipeline into two stages: (1) high-quality data recall from the
+                            web corpus, and (2) Q-A pair extraction and (3) Q-A pair refinement. We depict the full pipeline
+                            in Figure 3 and provide an example for extraction and refinement in Figure 4
+                        </p>
+                          
+                    </div>
+                    <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.1 Recall from Common Crawl</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            Unlike previous math-centric approaches [Paster et al., 2023, Wang et al., 2023c, Shao et al., 2024],
+we aim for broad coverage disciplines like math, science, engineering, etc. Therefore, we need to
+carefully balance the seed data to ensure diversity. However, the public available training datasets are
+mostly limited to mathematics. To address this issue, we propose to crawl new exam problems from
+several educational websites like stemez.com, homeworkstudy.com, khanacademy.org. These sites
+contain diverse problems from different disciplines to help us ensure diversity.
+We crawled 100K seed data as the positive training examples and randomly selected 100K negative
+documents from CC [Computer, 2023] to train a fastText model [Joulin et al., 2016]. We use the
+trained fastText model to recall relevant documents. We employ the open-source fastText library with a vector dimension of 256 to train the model for 3 epochs, where the learning rate is 0.1, the
+maximum length of n-gram is 3, and the maximum number of word occurrences is 3. In the first stage,
+the trained fastText model recalls the top 100B documents from CC. The documents are grouped by
+their domains (root URL) and we only retain the domains with enough documents. We then prompt
+GPT-4 to scan through the domains and automatically select the ones which might contain instruction
+data. We use in-context learning and found that GPT-4 has achieved adequate success rate. Then,
+we further sample documents from the selected domains as positive, and sample documents from
+the non-selected domains & general Common Crawl are used as negative to re-train a better fastText
+classifier. The newly trained fastText classifier is used to recall the top 18M documents.
+                        </p>
+                        <p>
+                            <!-- Image5 carousel -->
+                                
+                            <section class="hero">
+                                <div class="hero-body">
+                                    <div class="container is-max-desktop">
+                                        <div class="columns is-centered">
+                                            <div class="column is-four-fifths">
+                                                <div class="item">
+                                                    <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                                                    <img src="static\images\url.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                                                    <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
+                                                        Figure 5: The distribution of the top 25 URLs among the 81 total URLs in our instruction dataset.
+Most of the instruction data comes from tutoring websites, forums, and homework websites.
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- End image5 carousel -->
+                            
+                            <p>      
+                    </div>
+                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.2 Q-A Pair Extraction</h3>
+
+                        <div class="content has-text-justified">
+                            <p>
+                                The recalled documents come from very diverse domains including forums, homework, quiz, and
+                                exam websites, etc. We observe that there exists a significant amount of naturally existing Q-A pairs
+                                in these documents. However, these Q-A pairs are interwoven with a high volume of noise tokens
+                                like ads, markups, boilerplate, etc.
+                            </p>
+                            <p>
+                                We first write pre-processing function to pre-extract useful content from recalled documents. This is
+by parsing the HTML of the recalled documents to strip off the unrelated content like site information,
+ads, HTML boilerplate, etc. This step helps us shorten the document length significantly for the next
+step. We then prompt Mixtral-8×7B [Jiang et al., 2024] to identify the text span (beginning and end)
+of question and answer pairs. Specifically, we provide five in-context examples to guide the model to
+do the extraction. We also allow the model to return void if there exist no natural question-answer
+pairs. In this stage, only 30% of the recalled documents were identified to contain naturally existing
+Q-A pairs, which leads to roughly 5M Q-A pairs as our candidates. However, these candidates still
+contain lots of unrelated content, formality issues. Also, a large portion of the extracted Q-A pairs do
+not contain any explanation for how the answer is derived. Therefore, we propose to perform another
+round of refinement to increase the data quality.
+                            <p>    
+                            <p>
+                                To avoid contamination, we follow previous work [Shao et al., 2024] to filter out web pages containing
+                                questions or answers to all of our evaluation benchmarks. Specifically, we filter out all the web pages
+                                that contain n-grams (n = 10) string matching with either the questions and the answer.
+
+                            <p>   
+                        </div>
+
+                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.3 Q-A Pair Refinement</h3>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Image6 carousel -->
+                                
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="item">
+                        <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                        <img src="static\images\Figure_1.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                        <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
+                            Figure 6: Mistral-7B model performance improves with scaling instructions. Additionally, SFT Loss
+                            is a more effective learning approach compared to LM Loss.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End image6 carousel -->
+
+
+
+
+<!--ending WEBINSTRUCT-->
+
+   
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container  is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Overall Results</h2>
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="static/images/overall_results.png" alt="MY ALT TEXT" />
+                            <h2 class="subtitle has-text-centered">
+                                Figure 2: Overall results of 🦣MAmmoTH on the in-domain and out-of-domain datasets.
+                            </h2>
+                            <p>
+                                Overall, we can see that MAmmoTH and MAmmoTH-Coder are able to outperform the SoTA model at different scales. In general, the performance gain for OOD datasets is more significant than IND datasets. These results show us the potential of our models as
+                                a mathematical generalist. On several datasets, MAmmoTH-Coder-34B and MAmmoTH-70B are even surpassing closed-source LLMs (see more break down results below).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container  is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Where does the gain come from?</h2>
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="static/images/ablation_results.png" alt="MY ALT TEXT" />
+                            <h2 class="subtitle">
+                                Figure 3: Investigation of the influence of CoT \& PoT hybrid training on the 7B Llama-2 model. Key insights include: 1) The SoTA model, utilizing dataset-specific CoT fine-tuning on GSM and MATH, displays strong performance within its domains but struggles
+                                in OOD scenarios; 2) Diverse data sources in MathInstruct enable better math generalist model; 3) Fine-tuning on the PoT subsets generally outperforms fine-tuning on the CoT subsets; 4) Hybrid training yields the best-performing
+                                model.
+                            </h2>
+                            <p>
+                                In order to better understand what factors contribute to the great gain of 🦣MAmmoTH over existing baselines, we set up a group of control experiments in the Figure 3. We study the following setups:
+                                <ol>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - CoT):</b> This experiment aims to understand how much our curated CoT data could improve the generalization over the SoTA model WizardMath trained specifically on GSM + MATH. As can be seen,
+                                        while sacrificing accuracy on GSM + MATH by 3%, our CoT subset fine-tuning improves the overall nine-dataset accuracy from 27% to 32%. </li>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - PoT):</b> This experiment aims to understand the advantage of our PoT subset. As can be observed, our PoT subset fine-tuning can significantly improve the overall accuracy from 27% to 37.5%.
+                                        This ablation reflects the importance of unlocking the program generation capabilities of our model.</li>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - Hybrid):</b> We further combine CoT and PoT as the hybrid training data to achieve the best overall performance of 45.4%. This combined gain comes from two aspects:
+                                        <ul style="list-style-type: disc;">
+                                            <li>
+                                                The CoT subset can help maintain the generic language-based reasoning skills to handle scenarios where PoT cannot handle well, e.g., the multi-choice questions in AQuA, SAT, and MMLU.
+                                            </li>
+                                            <li>
+                                                The PoT subset can teach the model how to utilize Python APIs to solve complex math problems with high precision, e.g., the MATH problems requiring complex computation.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+
+
+
+
+                                <!-- We put some case studies in Appendix \ref{sec:case_study} to demonstrate the respective advantages of PoT and CoT in solving different types of math problems. To summarize, we attribute our substantial gain to: 1) diverse data sources covering different math fields and complexity levels and 2) a hybrid of CoT \& PoT instruction tuning strategy.  -->
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+<!--table1-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered is-fifths-fifths">
+                    <h2 class="title is-3">Table 1</h2>
+                    <div class="content has-text-justified">
+                        <table id="myTable">
+                          
+                            </thead>
+                                 
+                                <tr>
+                                    <th>Dataset</th>
+                                    <th>#Pairs</th>
+                                    <th>Domain</th>
+                                    <th>Format</th>
+                                    <th>Dataset Source</th>
+                                </tr>
+
+                            </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>FLAN V2</td>
+                                    <td>100K</td>
+                                    <td>General</td>
+                                    <td>SFT</td>
+                                    <td>NLP data + Human CoT</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Self-Instruct</td>
+                                    <td>82K</td>
+                                    <td>General</td>
+                                    <td>SFT</td>
+                                    <td>Generated by GPT3</td>
+                                  </tr>
+                                  <tr>
+                                    <td>GPT4-Alpaca</td>
+                                    <td>52K</td>
+                                    <td>General</td>
+                                    <td>SFT</td>
+                                    <td>Generated by GPT4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>SuperNI</td>
+                                    <td>96K</td>
+                                    <td>General</td>
+                                    <td>SFT</td>
+                                    <td>NLP Datasets</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tora</td>
+                                    <td>16K</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                  </tr>
+                                  <tr>
+                                    <td>WizardMath</td>
+                                    <td>96K</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MathInstruct</td>
+                                    <td>262K</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 Math datasets Synthesis</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MetaMathQA</td>
+                                    <td>395K</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                  </tr>
+                                  <tr>
+                                    <td>XwinMath</td>
+                                    <td>1.4M</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                  </tr>
+                                  <tr>
+                                    <td>OpenMathInstruct</td>
+                                    <td>1.8M</td>
+                                    <td>Math</td>
+                                    <td>SFT</td>
+                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Dataset</th>
+                                    <th>#Tokens</th>
+                                    <th>Domain</th>
+                                    <th>Format</th>
+                                    <th>Dataset Source</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OpenWebMath</td>
+                                    <td>12B</td>
+                                    <td>Math</td>
+                                    <td>LM</td>
+                                    <td>Filtered from Web</td>
+                                </tr>
+                                <tr>
+                                    <td>MathPile</td>
+                                    <td>10B</td>
+                                    <td>Math</td>
+                                    <td>LM</td>
+                                    <td>Filtered from Web</td>
+                                </tr>
+                                <tr>
+                                    <td>Cosmopeida</td>
+                                    <td>25B</td>
+                                    <td>General</td>
+                                    <td>LM</td>
+                                    <td>Synthesized by Mixtral</td>
+                                </tr>
+                                <tr>
+                                    <td>MINERVA</td>
+                                    <td>38B</td>
+                                    <td>Math</td>
+                                    <td>LM</td>
+                                    <td>Filtered from Web</td>
+                                </tr>
+                                <tr>
+                                    <td>Proof-Pile-2</td>
+                                    <td>55B</td>
+                                    <td>Math</td>
+                                    <td>LM</td>
+                                    <td>OWM+Arxiv+Code</td>
+                                </tr>
+                                <tr>
+                                    <td>Galactica</td>
+                                    <td>106B</td>
+                                    <td>Math & Sci.</td>
+                                    <td>LM</td>
+                                    <td>Filtered from Web</td>
+                                </tr>
+                                <tr>
+                                    <td>DeepseekMath</td>
+                                    <td>120B</td>
+                                    <td>Math</td>
+                                    <td>LM</td>
+                                    <td>Recalled from Web</td>
+                                </tr>
+                                <tr>
+                                    <td>WEBINSTRUCT</td>
+                                    <td>(10M) 5B</td>
+                                    <td>Math & Sci.</td>
+                                    <td>SFT</td>
+                                    <td> Recall and Extracted from Web</td>
+                                </tr>
+                            </tbody>
+
+                            
+
+                        </table>
+                        <capion>Table 1: The list of existing supervise-fine-tuning and continue-training datasets. The SFT datasets
+                            are mostly from NLP datasets or completely synthesized by GPT-4. The CT datasets are much larger
+                            because they are filtered or recalled from the web. The the content contains lots of noise. We are the
+                            first dataset to combine these two to build high-quality yet large-scale SFT dataset.</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--table1-->
+<!--table2-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered is-fifths-fifths">
+                    <h2 class="title is-3">Table 2</h2>
+                    <div class="content has-text-justified">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>TheoremQA</th>
+                                    <th>MATH</th>
+                                    <th>GSM8K</th>
+                                    <th>GPQA</th>
+                                    <th>MMLU-ST</th>
+                                    <th>BBH</th>
+                                    <th>ARC-C</th>
+                                    <th>Avg</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GPT-4-Turbo-0409</td>
+                                    <td>48.4</td>
+                                    <td>69.2</td>
+                                    <td>94.5</td>
+                                    <td>46.2</td>
+                                    <td>76.5</td>
+                                    <td>86.7</td>
+                                    <td>93.6</td>
+                                    <td>73.6</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" style="text-align:center"><strong>Parameter Size between 20B and 110B</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Qwen-1.5-110B</td>
+                                    <td><i>34.9</i></td>
+                                    <td><i>49.6</i></td>
+                                    <td><i>85.4</i></td>
+                                    <td>35.9</td>
+                                    <td><i>73.4</i></td>
+                                    <td><i>74.8</i></td>
+                                    <td>91.6</td>
+                                    <td><i>63.6</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Qwen-1.5-72B</td>
+                                    <td>29.3</td>
+                                    <td>46.8</td>
+                                    <td>77.6</td>
+                                    <td><i>36.3</i></td>
+                                    <td>68.5</td>
+                                    <td>68.0</td>
+                                    <td><i>92.2</i></td>
+                                    <td>59.8</td>
+                                </tr>
+                                <tr>
+                                    <td>Deepseek-LM-67B</td>
+                                    <td>25.3</td>
+                                    <td>15.9</td>
+                                    <td>66.5</td>
+                                    <td>31.8</td>
+                                    <td>57.4</td>
+                                    <td>71.7</td>
+                                    <td>86.8</td>
+                                    <td>50.7</td>
+                                </tr>
+                                <tr>
+                                    <td><i>Yi-34B</i></td>
+                                    <td>23.2</td>
+                                    <td>15.9</td>
+                                    <td>67.9</td>
+                                    <td>29.7</td>
+                                    <td>62.6</td>
+                                    <td>66.4</td>
+                                    <td>89.5</td>
+                                    <td>50.7</td>
+                                </tr>
+                                <tr>
+                                    <td>Llemma-34B</td>
+                                    <td>21.1</td>
+                                    <td>25.0</td>
+                                    <td>71.9</td>
+                                    <td>29.2</td>
+                                    <td>54.7</td>
+                                    <td>48.4</td>
+                                    <td>69.5</td>
+                                    <td>45.7</td>
+                                </tr>
+                                <tr>
+                                    <td><i>Mixtral-8&times;7B</i></td>
+                                    <td>23.2</td>
+                                    <td>28.4</td>
+                                    <td>74.4</td>
+                                    <td>29.7</td>
+                                    <td>59.7</td>
+                                    <td>66.8</td>
+                                    <td>84.7</td>
+                                    <td>52.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Mixtral-8&times;7B-Instruct</td>
+                                    <td>25.3</td>
+                                    <td>22.1</td>
+                                    <td>71.7</td>
+                                    <td>32.4</td>
+                                    <td>61.4</td>
+                                    <td>57.3</td>
+                                    <td>84.7</td>
+                                    <td>50.7</td>
+                                </tr>
+                                <tr>
+                                    <td>Intern-Math-20B</td>
+                                    <td>17.1</td>
+                                    <td>37.7</td>
+                                    <td>82.9</td>
+                                    <td>28.9</td>
+                                    <td>50.1</td>
+                                    <td>39.3</td>
+                                    <td>68.6</td>
+                                    <td>46.4</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" style="text-align:center"><strong>Trained only with WEBINSTRUCT (All evaluations are held-out)</strong></td>
+                                <tr> 
+                                    <tr>
+                                        <td>\model{34B}</td>
+                                        <td>30.4</td>
+                                        <td>35.0</td>
+                                        <td>75.6</td>
+                                        <td>31.8</td>
+                                        <td>64.5</td>
+                                        <td>68.0</td>
+                                        <td>90.0</td>
+                                        <td>56.4</td>
+                                      </tr>
+                                      <tr bgcolor="#E0FFFF">
+                                        <td>$\Delta$ over \e{Yi}</td>
+                                        <td>+7.2</td>
+                                        <td>+19.1</td>
+                                        <td>+7.7</td>
+                                        <td>+2.1</td>
+                                        <td>+2.9</td>
+                                        <td>+1.2</td>
+                                        <td>+0.5</td>
+                                        <td>+5.8</td>
+                                      </tr>
+                                      <tr>
+                                        <td>\model{8x7B}</td>
+                                        <td>32.2</td>
+                                        <td>39.0</td>
+                                        <td>75.4</td>
+                                        <td>36.8</td>
+                                        <td>67.4</td>
+                                        <td>71.1</td>
+                                        <td>87.5</td>
+                                        <td>58.9</td>
+                                      </tr>
+                                      <tr bgcolor="#E0FFFF">
+                                        <td>$\Delta$ over \e{Mixtral}</td>
+                                        <td>+9.2</td>
+                                        <td>+10.6</td>
+                                        <td>+1.0</td>
+                                        <td>+7.1</td>
+                                        <td>+7.4</td>
+                                        <td>+3.3</td>
+                                        <td>+2.8</td>
+                                        <td>+6.5</td>
+                                      </tr>
+                                    <tr>
+                                        <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K</strong></td>
+                                    <tr>  
+                                        <tr>
+                                            <td>\modelplus{8x7B}</td>
+                                            <td>34.1</td>
+                                            <td>47.0</td>
+                                            <td>86.4</td>
+                                            <td>37.4</td>
+                                            <td>72.4</td>
+                                            <td>74.1</td>
+                                            <td>88.4</td>
+                                            <td>62.8</td>
+                                          </tr>
+                                          <tr bgcolor="#E0FFFF">
+                                            <td>$\Delta$ over Qwen-1.5-110B</td>
+                                            <td>-0.8</td>
+                                            <td>-2.6</td>
+                                            <td>+1.0</td>
+                                            <td>+2.5</td>
+                                            <td>-1.0</td>
+                                            <td>-0.7</td>
+                                            <td>-4.0</td>
+                                            <td>-0.8</td>
+                                          </tr>
+                                        <tr>
+                                            <td colspan="9" style="text-align:center"><strong>Parameter Size = 7B or 8B</strong></td>
+                                        <tr>
+                                            <tr>
+                                                <td>Deepseek-7B</td>
+                                                <td>15.7</td>
+                                                <td>6.4</td>
+                                                <td>17.4</td>
+                                                <td>25.7</td>
+                                                <td>43.1</td>
+                                                <td>42.8</td>
+                                                <td>47.8</td>
+                                                <td>28.4</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Qwen-1.5-7B</td>
+                                                <td>14.2</td>
+                                                <td>13.3</td>
+                                                <td>54.1</td>
+                                                <td>26.7</td>
+                                                <td>45.4</td>
+                                                <td>45.2</td>
+                                                <td>75.6</td>
+                                                <td>39.2</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Mistral-7B</td>
+                                                <td>19.2</td>
+                                                <td>11.2</td>
+                                                <td>36.2</td>
+                                                <td>24.7</td>
+                                                <td>50.1</td>
+                                                <td>55.7</td>
+                                                <td>74.2</td>
+                                                <td>38.8</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Gemma-7B</td>
+                                                <td>21.5</td>
+                                                <td>24.3</td>
+                                                <td>46.4</td>
+                                                <td>25.7</td>
+                                                <td>53.3</td>
+                                                <td>57.4</td>
+                                                <td>72.5</td>
+                                                <td>43.0</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Llemma-7B</td>
+                                                <td>17.2</td>
+                                                <td>18.0</td>
+                                                <td>36.4</td>
+                                                <td>23.2</td>
+                                                <td>45.2</td>
+                                                <td>44.9</td>
+                                                <td>50.5</td>
+                                                <td>33.6</td>
+                                              </tr>
+                                              <tr>
+                                                <td>WizardMath-7B-1.1</td>
+                                                <td>11.7</td>
+                                                <td>33.0</td>
+                                                <td>83.2</td>
+                                                <td>28.7</td>
+                                                <td>52.7</td>
+                                                <td>56.7</td>
+                                                <td>76.9</td>
+                                                <td>49.0</td>
+                                              </tr>
+                                              <tr>
+                                                <td>OpenMath-Mistral</td>
+                                                <td>13.1</td>
+                                                <td>9.1</td>
+                                                <td>24.5</td>
+                                                <td>26.5</td>
+                                                <td>43.7</td>
+                                                <td>49.5</td>
+                                                <td>69.4</td>
+                                                <td>33.7</td>
+                                              </tr>
+                                            <tr>
+                                              <td>Abel-7B-002</td>
+                                              <td>19.3</td>
+                                              <td>29.5</td>
+                                              <td>83.2</td>
+                                              <td>30.3</td>
+                                              <td>29.7</td>
+                                              <td>32.7</td>
+                                              <td>72.5</td>
+                                              <td>42.5</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Intern-Math-7B</td>
+                                              <td>13.2</td>
+                                              <td>34.6</td>
+                                              <td>78.1</td>
+                                              <td>22.7</td>
+                                              <td>41.1</td>
+                                              <td>48.1</td>
+                                              <td>59.8</td>
+                                              <td>42.5</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Rho-1-Math-7B</td>
+                                              <td>21.0</td>
+                                              <td>31.0</td>
+                                              <td>66.9</td>
+                                              <td>29.2</td>
+                                              <td>53.1</td>
+                                              <td>57.7</td>
+                                              <td>72.7</td>
+                                              <td>47.3</td>
+                                            </tr>
+                                            <tr >
+                                              <td>Deepseek-Math-7B</td>
+                                              <td>25.3</td>
+                                              <td>34.0</td>
+                                              <td>64.2</td>
+                                              <td>29.2</td>
+                                              <td>56.4</td>
+                                              <td>59.5</td>
+                                              <td>67.8</td>
+                                              <td>48.0</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Deepseek-Math-Instruct</td>
+                                              <td>23.7</td>
+                                              <td>44.3</td>
+                                              <td>82.9</td>
+                                              <td>31.8</td>
+                                              <td>59.3</td>
+                                              <td>55.4</td>
+                                              <td>70.1</td>
+                                              <td>52.5</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Llama-3-8B</td>
+                                              <td>20.1</td>
+                                              <td>21.3</td>
+                                              <td>54.8</td>
+                                              <td>27.2</td>
+                                              <td>55.6</td>
+                                              <td>61.1</td>
+                                              <td>78.6</td>
+                                              <td>45.5</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Llama-3-8B-Instruct</td>
+                                              <td>22.8</td>
+                                              <td>30.0</td>
+                                              <td>79.5</td>
+                                              <td>34.5</td>
+                                              <td>60.2</td>
+                                              <td>66.0</td>
+                                              <td>80.8</td>
+                                              <td>53.4</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="9" style="text-align:center"><strong>Trained only with \dataset (All evaluations are held-out)</strong></td>
+                                            <tr>
+                                                <tr>
+                                                    <td>\model{7B}</td>
+                                                    <td>26.7</td>
+                                                    <td>34.2</td>
+                                                    <td>67.4</td>
+                                                    <td>34.8</td>
+                                                    <td>60.6</td>
+                                                    <td>60.0</td>
+                                                    <td>81.8</td>
+                                                    <td>52.2</td>
+                                                  </tr>
+                                                  <tr bgcolor="#E0FFFF">
+                                                    <td>$\Delta$ over \e{Mistral}</td>
+                                                    <td>+7.5</td>
+                                                    <td>+23.0</td>
+                                                    <td>+31.2</td>
+                                                    <td>+10.1</td>
+                                                    <td>+10.5</td>
+                                                    <td>+4.3</td>
+                                                    <td>+7.6</td>
+                                                    <td>+13.4</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>\model{8B}</td>
+                                                    <td>29.7</td>
+                                                    <td>33.4</td>
+                                                    <td>67.9</td>
+                                                    <td>38.4</td>
+                                                    <td>61.0</td>
+                                                    <td>60.8</td>
+                                                    <td>81.0</td>
+                                                    <td>53.1</td>
+                                                  </tr>
+                                                  <tr bgcolor="#E0FFFF">
+                                                    <td>$\Delta$ over \e{Llama3}</td>
+                                                    <td>+9.6</td>
+                                                    <td>+12.1</td>
+                                                    <td>+13.1</td>
+                                                    <td>+11.2</td>
+                                                    <td>+5.4</td>
+                                                    <td>-0.3</td>
+                                                    <td>+2.4</td>
+                                                    <td>+7.6</td>
+                                                  </tr>    
+                                                <tr>
+                                                   <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K)</strong></td>
+                                                 <tr>
+                                                    <tr>
+                                                        <td>\modelplus{7B}</td>
+                                                        <td>29.2</td>
+                                                        <td>45.0</td>
+                                                        <td>84.7</td>
+                                                        <td>30.3</td>
+                                                        <td>64.5</td>
+                                                        <td>63.1</td>
+                                                        <td>83.0</td>
+                                                        <td>57.1</td>
+                                                      </tr>
+                                                      <tr bgcolor="#E0FFFF">
+                                                        <td>\modelplus{8B}</td>
+                                                        <td>32.5</td>
+                                                        <td>42.8</td>
+                                                        <td>84.1</td>
+                                                        <td>37.3</td>
+                                                        <td>65.7</td>
+                                                        <td>67.8</td>
+                                                        <td>83.4</td>
+                                                        <td>59.1</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>$\Delta$ over best baseline</td>
+                                                        <td>+7.2</td>
+                                                        <td>+0.7</td>
+                                                        <td>+1.5</td>
+                                                        <td>+2.8</td>
+                                                        <td>+5.5</td>
+                                                        <td>+1.8</td>
+                                                        <td>+2.6</td>
+                                                        <td>+5.7</td>
+                                                      </tr>
+                                                    </table>    
+
+
+
+                            </tbody>
+                            <capion>Table 2: Our main results on various science reasoning datasets. All the models without ‘-Instruct’
+                                refers to the released base model before instruction tuning. For the experimental results, if they are
+                                reported by official paper or OpenCompass, we take the reported numbers. If not, we will use our
+                                own script for evaluation. Underscored results are the best baseline scores under the size constraint.</caption>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--table2-->
+<!--table3-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered is-fifths-fifths">
+                    <h2 class="title is-3">Table 3</h2>
+                    <div class="content has-text-justified">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>HumanEval</th>
+                                    <th>HumanEval+</th>
+                                    <th>MBPP</th>
+                                    <th>MBPP+</th>
+                                    <th>Average</th>
+                                    <th>Average+</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mistral-7B</td>
+                                    <td>28.7</td>
+                                    <td>23.8</td>
+                                    <td>51.9</td>
+                                    <td>42.1</td>
+                                    <td>40.3</td>
+                                    <td>33.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemma-7B</td>
+                                    <td>26.8</td>
+                                    <td>20.1</td>
+                                    <td>52.6</td>
+                                    <td>43.4</td>
+                                    <td>39.7</td>
+                                    <td>31.8</td>
+                                </tr>
+                                <tr>
+                                    <td>Llama-3-8B</td>
+                                    <td>33.5</td>
+                                    <td>29.3</td>
+                                    <td>61.4</td>
+                                    <td>51.6</td>
+                                    <td>47.5</td>
+                                    <td>40.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemma-1.1-7B-Instruct</td>
+                                    <td>42.7</td>
+                                    <td>35.4</td>
+                                    <td>57.1</td>
+                                    <td>45.0</td>
+                                    <td>49.9</td>
+                                    <td>40.2</td>
+                                </tr>
+                                <tr>
+                                    <td>Mistral-7B-Instruct-v0.2</td>
+                                    <td><strong>75.0</strong></td>
+                                    <td><strong>70.1</strong></td>
+                                    <td>44.7</td>
+                                    <td>37.0</td>
+                                    <td>59.9</td>
+                                    <td>53.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Llama-3-8B-Instruct</td>
+                                    <td>61.6</td>
+                                    <td>56.7</td>
+                                    <td><strong>70.1</strong></td>
+                                    <td><strong>59.3</strong></td>
+                                    <td><i>65.9</i></td>
+                                    <td><i>58.0</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Mixtral-8&times;7B-Instruct-v0.1</td>
+                                    <td>45.1</td>
+                                    <td>39.6</td>
+                                    <td>59.5</td>
+                                    <td>49.7</td>
+                                    <td>52.3</td>
+                                    <td>44.7</td>
+                                </tr>
+                                <tr>
+                                 <tr>   
+                                <tr>
+                                    <td>\model-7B-Plus</td>
+                                    <td><i>72.1</i></td>
+                                    <td><i>65.9</i></td>
+                                    <td>60.1</td>
+                                    <td>50.4</td>
+                                    <td><strong>66.1</strong></td>
+                                    <td><strong>58.2</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>\model-8B-Plus</td>
+                                    <td>63.4</td>
+                                    <td>57.9</td>
+                                    <td>60.4</td>
+                                    <td>48.6</td>
+                                    <td>61.9</td>
+                                    <td>53.3</td>
+                                </tr>
+                                <tr>
+                                    <td>\model-8&times;7B-Plus</td>
+                                    <td>57.9</td>
+                                    <td>53.7</td>
+                                    <td><i>68.7</i></td>
+                                    <td><i>56.9</i></td>
+                                    <td>63.3</td>
+                                    <td>55.3</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        <capion>Table 3:Code generation results of different models. Baseline results are copied from the
+                                EvalPlus [Liu et al., 2024] leaderboard..</caption>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--table3-->
+<!--table4-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered is-fifths-fifths">
+                    <h2 class="title is-3">Table 4</h2>
+                    <div class="content has-text-justified">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>MT-Bench</th>
+                                    <th>AlpacaEval 2.0</th>
+                                    <th>Arena Hard</th>
+                                    <th>MMLU</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GPT-4-1106-preview</td>
+                                    <td>9.32</td>
+                                    <td>50.0</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>GPT-3.5-Turbo-1106</td>
+                                    <td>8.32</td>
+                                    <td>19.3</td>
+                                    <td>18.9</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>GPT-3.5-Turbo-0301</td>
+                                    <td>7.94</td>
+                                    <td>18.1</td>
+                                    <td>18.1</td>
+                                    <td>70.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Tulu-2-DPO-70B</td>
+                                    <td>7.89</td>
+                                    <td>21.2</td>
+                                    <td>15.0</td>
+                                    <td>67.8</td>
+                                </tr>
+                                <tr>
+                                    <td>Llama-2-70b-chat</td>
+                                    <td>6.86</td>
+                                    <td>14.7</td>
+                                    <td>11.6</td>
+                                    <td>63.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Yi-34B-Chat</td>
+                                    <td>7.86</td>
+                                    <td>27.2</td>
+                                    <td>23.1</td>
+                                    <td>73.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemma-1.1-7B-Instruct</td>
+                                    <td>-</td>
+                                    <td>10.4</td>
+                                    <td>7.5</td>
+                                    <td>64.3</td>
+                                </tr>
+                                <tr>
+                                    <td>Mistral-7B-Instruct-v0.2</td>
+                                    <td>7.60</td>
+                                    <td>17.1</td>
+                                    <td>12.6</td>
+                                    <td>60.8</td>
+                                </tr>
+                                <tr>
+                                    <td>Llama-3-8B-Instruct</td>
+                                    <td>8.02</td>
+                                    <td>22.9</td>
+                                    <td>20.6</td>
+                                    <td>67.2</td>
+                                </tr>
+                                <tr>
+                                    <td>Mixtral-8&times;7B-Instruct-v0.1</td>
+                                    <td><strong>8.30</strong></td>
+                                    <td>23.7</td>
+                                    <td>23.4</td>
+                                    <td><strong>70.6</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>\modelplus{7B}</td>
+                                    <td>7.88</td>
+                                    <td>23.4</td>
+                                    <td>14.6</td>
+                                    <td>63.3</td>
+                                </tr>
+                                <tr>
+                                    <td>\modelplus{8B}</td>
+                                    <td>7.95</td>
+                                    <td>18.5</td>
+                                    <td>16.6</td>
+                                    <td>64.6</td>
+                                </tr>
+                                <tr>
+                                    <td>\modelplus{8x7B}</td>
+                                    <td><i>8.20</i></td>
+                                    <td><strong>33.8</strong></td>
+                                    <td><strong>32.6</strong></td>
+                                    <td><i>68.3</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <capion>Table 4: Evaluation of instruction-following and MMLU performance for various models. Baseline
+                            scores are sourced from the original papers or the MT-Bench, AlpacaEval 2.0, and Arena Hard leader-
+                            boards. (“-”) indicates that the score was not available from the referenced sources. MAmmoTH2-Plus
+                            exhibits strong general conversational ability and excels at multitask language understanding across a
+                            wide range of domains compared to their official instruct counterparts and larger models</caption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--table4-->
+</html>
