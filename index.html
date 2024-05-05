@@ -86,7 +86,7 @@
                         <div class="column has-text-centered">
                             <div class="publication-links">
                                 <span class="link-block">
-                          <a href="https://huggingface.co/datasets/TIGER-Lab/MathInstruct" target="_blank"
+                          <a href="https://huggingface.co/datasets/" target="_blank"
                           class="external-link button is-normal is-rounded is-dark">
                           <span class="icon">
                             🤗
@@ -97,7 +97,7 @@
 
                                 <!-- Supplementary PDF link -->
                                 <span class="link-block">
-                        <a href="https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-7B" target="_blank"
+                        <a href="https://huggingface.co/TIGER-Lab/" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           🤗
@@ -108,7 +108,7 @@
 
                                 <!-- Github link -->
                                 <span class="link-block">
-                      <a href="https://github.com/TIGER-AI-Lab/MAmmoTH" target="_blank"
+                      <a href="https://github.com/TIGER-AI-Lab/MAmmoTH2" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
@@ -119,7 +119,7 @@
 
                                 <!-- ArXiv abstract Link -->
                                 <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2309.05653.pdf" target="_blank"
+                    <a href="https://arxiv.org/pdf/" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -207,9 +207,9 @@ distillation, providing a new perspective on building better instruction tuning 
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <!-- Added inline style for right alignment -->
-                    <h2 class="title is-3" style="text-align: left;">1  Introduction</h2>
+                    <h2 class="title is-3">Introduction</h2>
                     <div class="content has-text-justified">
-                        <p>
+                        <!-- <p>
                             Reasoning is a fundamental aspect of human cognition and problem-solving [Clark et al., 2018,
 Hendrycks et al., 2021a, Cobbe et al., 2021, Hendrycks et al., 2021b, Rein et al., 2023]. Proficiency in
 reasoning is essential for advancing scientific knowledge, developing new technologies, and making
@@ -218,10 +218,9 @@ Ouyang et al., 2022, Touvron et al., 2023a,b, Achiam et al., 2023, Team et al., 
 remarkable progress in various NLP tasks. However, their ability to perform complex reasoning
 tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering is still limited.
 
-                        </p>
-<p>
+                        </p> -->
+<!-- <p> -->
 <!-- Image2 carousel -->
-    
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
@@ -241,8 +240,6 @@ tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering
 </section>
 
 <!-- End image2 carousel -->
-
-<p>
                     </div>
                 </div>
             </div>
@@ -250,14 +247,14 @@ tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering
     </div>
 </section>
 
-<section class="hero">
+<!-- <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
-                <div class="column has-text-centered">
+                <div class="column has-text-centered"> -->
                     <!-- Removed the title section -->
-                    <div class="content has-text-justified">
-                        <p>
+                    <!-- <div class="content has-text-justified"> -->
+                        <!-- <p>
                             Recent studies have extensively explored different approaches to enhance LLMs’ reasoning abilities
 after pre-training. The two main approaches are continued training and instruction tuning. Continued
 training focuses on training LLMs with language model loss on large-scale math or science-centric
@@ -269,16 +266,16 @@ Hendrycks et al., 2021b, Amini et al., 2019] are often limited in scale, recent 
 Yue et al., 2023, Tosh et al., 2024, Li et al., 2024, Tang et al., 2024] attempt to prompt state-of-the-
 art models like GPT-4 with seed data to synthesize large-scale instruction datasets. However, the
 synthesized instruction data becomes highly biased towards the seed data distribution and is prone to
-a high degree of hallucination.<p>
-<p>
+a high degree of hallucination.<p> -->
+<!-- <p>
 To address these limitations, we propose to discover naturally existing instruction data from
 the web. We argue that the web corpus (e.g., Common Crawl) already contains a vast amount of
 high-quality instruction data that can enhance LLM reasoning. For example, textbooks, exams,
 educational resources, and forums on the web contain a wealth of instruction-following pairs across
 various domains like math, science, engineering, and humanities. We believe such readily available
 instruction data is not only diverse but also of high quality. However, such instruction data is highly
-dispersed across the corpus, which makes it particularly challenging to discover.<p>
-<p>    
+dispersed across the corpus, which makes it particularly challenging to discover.<p> -->
+<!-- <p>    
 In this paper, we aim to mine these instruction-response pairs from the web using a three-step pipeline.
 (1) Recall step: We create a diverse seed dataset by crawling several quiz websites. We use this
 seed data to train a fastText model [Joulin et al., 2016] and employ it to recall documents from
@@ -304,8 +301,49 @@ across different datasets, while MAmmoTH2-34B boosts the Yi-34B base model by 6-
 different datasets. Notably, WEBINSTRUCT does not contain any data from any of the evaluation
 benchmarks, highlighting the strong generalization of the instruction-tuned model. These findings
 reveal new perspectives on how to construct high-quality instruction dataset in scale without requiring
-crowdsourcing or distillation.   </p>
-<p>
+crowdsourcing or distillation.   </p> -->
+
+    <!-- <p>
+    <p> 
+<p>  
+    To further enhance the performance of MAmmoTH2 on more general code generation, math rea-
+    soning and instruction-following tasks, we continue to tune it on several open-source instruction
+    datasets including OpenHermes2.5, Code-Feedback, Math-plus. The further enhanced model is
+    named MAmmoTH2-Plus, which exhibits strong performance across these general tasks. For example,
+    MAmmoTH2-7B-Plus achieves top performance on HumanEval and MBPP code generation bench-
+    marks, and MAmmoTH2-8×7B leads the AlpacaEval 2.0 and Arena Hard leaderboards for general
+    language understanding and instruction-following. The consistent gain of MAmmoTH2-Plus over the
+    official instruct models (e.g. Mixtral-Instruct-v0.1) further validates the effectiveness of our dataset
+    and training approach.         
+
+
+<p> -->
+
+
+                    <!-- </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!--end begining introduction-->
+<!--begining WEBINSTRUCT-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!-- Added inline style for right alignment -->
+                    <h2 class="title is-3">WEBINSTRUCT</h2>
+                    
+                    <div class="content has-text-justified">
+                        <p>
+                            In this section, we outline the process of constructing WEBINSTRUCT from the web corpus. Specif-
+                            ically, we divide the data collection pipeline into two stages: (1) high-quality data recall from the
+                            web corpus, and (2) Q-A pair extraction and (3) Q-A pair refinement. We depict the full pipeline
+                            in Figure 3 and provide an example for extraction and refinement in Figure 4
+                        </p>
 <!-- Image3 carousel -->
     
 <section class="hero">
@@ -328,74 +366,8 @@ Step 3: Refine with the extracted Q-A pairs.
 </section>
 
 <!-- End image3 carousel -->
-
-<p>    
-    <p>
-        <!-- Image4 carousel -->
-            
-        <section class="hero">
-            <div class="hero-body">
-                <div class="container is-max-desktop">
-                    <div class="columns is-centered">
-                        <div class="column is-four-fifths">
-                            <div class="item">
-                                <!-- Displaying an Image of Hybrid Instruction Tuning -->
-                                <img src="static\images\example.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
-                                <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
-                                    Figure 4: An illustrating example from WEBINSTRUCT for the extraction and refine step
-                                </h2>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- End image4 carousel -->
-        
-        <p> 
-<p>  
-    To further enhance the performance of MAmmoTH2 on more general code generation, math rea-
-    soning and instruction-following tasks, we continue to tune it on several open-source instruction
-    datasets including OpenHermes2.5, Code-Feedback, Math-plus. The further enhanced model is
-    named MAmmoTH2-Plus, which exhibits strong performance across these general tasks. For example,
-    MAmmoTH2-7B-Plus achieves top performance on HumanEval and MBPP code generation bench-
-    marks, and MAmmoTH2-8×7B leads the AlpacaEval 2.0 and Arena Hard leaderboards for general
-    language understanding and instruction-following. The consistent gain of MAmmoTH2-Plus over the
-    official instruct models (e.g. Mixtral-Instruct-v0.1) further validates the effectiveness of our dataset
-    and training approach.         
-
-
-<p>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--end begining introduction-->
-<!--begining WEBINSTRUCT-->
-<section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <!-- Added inline style for right alignment -->
-                    <h2 class="title is-3" style="text-align: left;">2 WEBINSTRUCT</h2>
-                    
-                    <div class="content has-text-justified">
-                        <p>
-                            In this section, we outline the process of constructing WEBINSTRUCT from the web corpus. Specif-
-                            ically, we divide the data collection pipeline into two stages: (1) high-quality data recall from the
-                            web corpus, and (2) Q-A pair extraction and (3) Q-A pair refinement. We depict the full pipeline
-                            in Figure 3 and provide an example for extraction and refinement in Figure 4
-                        </p>
-                          
-                    </div>
-                    <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.1 Recall from Common Crawl</h3>
+                    <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Recall from Common Crawl</h3>
                     <div class="content has-text-justified">
                         <p>
                             Unlike previous math-centric approaches [Paster et al., 2023, Wang et al., 2023c, Shao et al., 2024],
@@ -442,7 +414,7 @@ Most of the instruction data comes from tutoring websites, forums, and homework 
                             
                             <p>      
                     </div>
-                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.2 Q-A Pair Extraction</h3>
+                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Q-A Pair Extraction</h3>
 
                         <div class="content has-text-justified">
                             <p>
@@ -472,121 +444,55 @@ round of refinement to increase the data quality.
                             <p>   
                         </div>
 
-                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">2.3 Q-A Pair Refinement</h3>  
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Image6 carousel -->
-                                
-<section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-four-fifths">
-                    <div class="item">
-                        <!-- Displaying an Image of Hybrid Instruction Tuning -->
-                        <img src="static\images\Figure_1.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
-                        <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
-                            Figure 6: Mistral-7B model performance improves with scaling instructions. Additionally, SFT Loss
-                            is a more effective learning approach compared to LM Loss.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- End image6 carousel -->
-
-
-
-
-<!--ending WEBINSTRUCT-->
-
-   
-
-
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div class="container  is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <h2 class="title is-3">Overall Results</h2>
-                        <div class="item">
-                            <!-- Your image here -->
-                            <img src="static/images/overall_results.png" alt="MY ALT TEXT" />
-                            <h2 class="subtitle has-text-centered">
-                                Figure 2: Overall results of 🦣MAmmoTH on the in-domain and out-of-domain datasets.
-                            </h2>
+                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Q-A Pair Refinement</h3>
+                        <div class="content has-text-justified">
                             <p>
-                                Overall, we can see that MAmmoTH and MAmmoTH-Coder are able to outperform the SoTA model at different scales. In general, the performance gain for OOD datasets is more significant than IND datasets. These results show us the potential of our models as
-                                a mathematical generalist. On several datasets, MAmmoTH-Coder-34B and MAmmoTH-70B are even surpassing closed-source LLMs (see more break down results below).
+                                To further improve extracted Q-A pair candidates, we propose to refine them with LLMs. In this
+step, we prompt Mixtral-7B×8 [Jiang et al., 2024] and Qwen-72B [Bai et al., 2023] to reformat the
+extracted Q-A pairs. If the answer does not contain any explanation, we prompt the LLMs to complete
+the intermediate reasoning steps leading to the answer. We adopt two models to increase diversity.
+Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEBINSTRUCT.
                             </p>
+                        </div>
+                        <div>
+        <!-- Image4 carousel -->
+            
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column is-four-fifths">
+                            <div class="item">
+                                <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                                <img src="static\images\example.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                                <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
+                                    Figure 4: An illustrating example from WEBINSTRUCT for the extraction and refine step
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div class="container  is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <h2 class="title is-3">Where does the gain come from?</h2>
-                        <div class="item">
-                            <!-- Your image here -->
-                            <img src="static/images/ablation_results.png" alt="MY ALT TEXT" />
-                            <h2 class="subtitle">
-                                Figure 3: Investigation of the influence of CoT \& PoT hybrid training on the 7B Llama-2 model. Key insights include: 1) The SoTA model, utilizing dataset-specific CoT fine-tuning on GSM and MATH, displays strong performance within its domains but struggles
-                                in OOD scenarios; 2) Diverse data sources in MathInstruct enable better math generalist model; 3) Fine-tuning on the PoT subsets generally outperforms fine-tuning on the CoT subsets; 4) Hybrid training yields the best-performing
-                                model.
-                            </h2>
-                            <p>
-                                In order to better understand what factors contribute to the great gain of 🦣MAmmoTH over existing baselines, we set up a group of control experiments in the Figure 3. We study the following setups:
-                                <ol>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - CoT):</b> This experiment aims to understand how much our curated CoT data could improve the generalization over the SoTA model WizardMath trained specifically on GSM + MATH. As can be seen,
-                                        while sacrificing accuracy on GSM + MATH by 3%, our CoT subset fine-tuning improves the overall nine-dataset accuracy from 27% to 32%. </li>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - PoT):</b> This experiment aims to understand the advantage of our PoT subset. As can be observed, our PoT subset fine-tuning can significantly improve the overall accuracy from 27% to 37.5%.
-                                        This ablation reflects the importance of unlocking the program generation capabilities of our model.</li>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - Hybrid):</b> We further combine CoT and PoT as the hybrid training data to achieve the best overall performance of 45.4%. This combined gain comes from two aspects:
-                                        <ul style="list-style-type: disc;">
-                                            <li>
-                                                The CoT subset can help maintain the generic language-based reasoning skills to handle scenarios where PoT cannot handle well, e.g., the multi-choice questions in AQuA, SAT, and MMLU.
-                                            </li>
-                                            <li>
-                                                The PoT subset can teach the model how to utilize Python APIs to solve complex math problems with high precision, e.g., the MATH problems requiring complex computation.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ol>
-
-
-
-
-
-                                <!-- We put some case studies in Appendix \ref{sec:case_study} to demonstrate the respective advantages of PoT and CoT in solving different types of math problems. To summarize, we attribute our substantial gain to: 1) diverse data sources covering different math fields and complexity levels and 2) a hybrid of CoT \& PoT instruction tuning strategy.  -->
-
-                            </p>
+        </section>
+        
+        <!-- End image4 carousel -->
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
+                        <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Dataset Statistics</h3>
+                        <div class="content has-text-justified">
+                            <p>
+                                Here we list all the existing dataset in Table 1 and compare it with WEBINSTRUCT. We can observe
+that most SFT datasets are less than 1M samples, but with very high quality. XwinMath [Li et al.,
+2024] and OpenMathInstruct [Tosh et al., 2024] are the largest datasets to scale up to over 1M by
+GPT-4 synthesizing. However, the seed data is only based GSM and MATH, which leads to their
+narrow domain coverage. As is shown in Table 2, XwinMath and OpenMath can over-fit to these
+two benchmarks with poor performance on other benchmarks. In contrast, continue-training (CT)
+datasets are normally recalled from the web with much larger in size. They can normally exceed
+10B tokens and even rise to 120B tokens. However, training on these datasets can be much more
+expensive. Furthermore, these datasets lead to limited gain due to the much higher noise ratio than
+SFT datasets. Our WEBINSTRUCT strikes a good balance between scalability and quality. It almost
+approaches the scalability of the common CT datasets while maintaining the high quality through the
+three-step construction pipeline. This makes our dataset unique from other alteranatives.
+                            </p>
 <!--table1-->
 <section class="hero">
     <div class="hero-body">
@@ -804,24 +710,24 @@ round of refinement to increase the data quality.
                                 </tr>
                                 <tr>
                                     <td>Qwen-1.5-110B</td>
-                                    <td><i>34.9</i></td>
-                                    <td><i>49.6</i></td>
-                                    <td><i>85.4</i></td>
+                                    <td><u>34.9</u></td>
+                                    <td><u>49.6</u></td>
+                                    <td><u>85.4</u></td>
                                     <td>35.9</td>
-                                    <td><i>73.4</i></td>
-                                    <td><i>74.8</i></td>
+                                    <td><u>73.4</u></td>
+                                    <td><u>74.8</u></td>
                                     <td>91.6</td>
-                                    <td><i>63.6</i></td>
+                                    <td><u>63.6</u></td>
                                 </tr>
                                 <tr>
                                     <td>Qwen-1.5-72B</td>
                                     <td>29.3</td>
                                     <td>46.8</td>
                                     <td>77.6</td>
-                                    <td><i>36.3</i></td>
+                                    <td><u>36.3</u></td>
                                     <td>68.5</td>
                                     <td>68.0</td>
-                                    <td><i>92.2</i></td>
+                                    <td><u>92.2</u></td>
                                     <td>59.8</td>
                                 </tr>
                                 <tr>
@@ -836,7 +742,7 @@ round of refinement to increase the data quality.
                                     <td>50.7</td>
                                 </tr>
                                 <tr>
-                                    <td><i>Yi-34B</i></td>
+                                    <td><u>Yi-34B</u></td>
                                     <td>23.2</td>
                                     <td>15.9</td>
                                     <td>67.9</td>
@@ -858,7 +764,7 @@ round of refinement to increase the data quality.
                                     <td>45.7</td>
                                 </tr>
                                 <tr>
-                                    <td><i>Mixtral-8&times;7B</i></td>
+                                    <td><u>Mixtral-8&times;7B</u></td>
                                     <td>23.2</td>
                                     <td>28.4</td>
                                     <td>74.4</td>
@@ -894,7 +800,7 @@ round of refinement to increase the data quality.
                                     <td colspan="9" style="text-align:center"><strong>Trained only with WEBINSTRUCT (All evaluations are held-out)</strong></td>
                                 <tr> 
                                     <tr>
-                                        <td>\model{34B}</td>
+                                        <td>MAmmoTH2-34B</td>
                                         <td>30.4</td>
                                         <td>35.0</td>
                                         <td>75.6</td>
@@ -905,7 +811,7 @@ round of refinement to increase the data quality.
                                         <td>56.4</td>
                                       </tr>
                                       <tr bgcolor="#E0FFFF">
-                                        <td>$\Delta$ over \e{Yi}</td>
+                                        <td>∆ over <u>Yi</u></td>
                                         <td>+7.2</td>
                                         <td>+19.1</td>
                                         <td>+7.7</td>
@@ -916,7 +822,7 @@ round of refinement to increase the data quality.
                                         <td>+5.8</td>
                                       </tr>
                                       <tr>
-                                        <td>\model{8x7B}</td>
+                                        <td>MAmmoTH2-8x7B</td>
                                         <td>32.2</td>
                                         <td>39.0</td>
                                         <td>75.4</td>
@@ -927,7 +833,7 @@ round of refinement to increase the data quality.
                                         <td>58.9</td>
                                       </tr>
                                       <tr bgcolor="#E0FFFF">
-                                        <td>$\Delta$ over \e{Mixtral}</td>
+                                        <td>∆ over <u>Mixtral</u></td>
                                         <td>+9.2</td>
                                         <td>+10.6</td>
                                         <td>+1.0</td>
@@ -941,18 +847,18 @@ round of refinement to increase the data quality.
                                         <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K</strong></td>
                                     <tr>  
                                         <tr>
-                                            <td>\modelplus{8x7B}</td>
-                                            <td>34.1</td>
-                                            <td>47.0</td>
-                                            <td>86.4</td>
-                                            <td>37.4</td>
-                                            <td>72.4</td>
-                                            <td>74.1</td>
-                                            <td>88.4</td>
-                                            <td>62.8</td>
+                                            <td>MAmmoTH2-8x7B-Plus</td>
+                                            <td><strong>34.1</strong></td>
+                                            <td><strong>47.0</strong></td>
+                                            <td><strong>86.4</strong></td>
+                                            <td><strong>37.4</strong></td>
+                                            <td><strong>72.4</strong></td>
+                                            <td><strong>74.1</strong></td>
+                                            <td><strong>88.4</strong></td>
+                                            <td><strong>62.8</strong></td>
                                           </tr>
                                           <tr bgcolor="#E0FFFF">
-                                            <td>$\Delta$ over Qwen-1.5-110B</td>
+                                            <td>∆ over Qwen-1.5-110B</td>
                                             <td>-0.8</td>
                                             <td>-2.6</td>
                                             <td>+1.0</td>
@@ -988,7 +894,7 @@ round of refinement to increase the data quality.
                                                 <td>39.2</td>
                                               </tr>
                                               <tr>
-                                                <td>Mistral-7B</td>
+                                                <td><u>Mistral-7B</u></td>
                                                 <td>19.2</td>
                                                 <td>11.2</td>
                                                 <td>36.2</td>
@@ -1098,7 +1004,7 @@ round of refinement to increase the data quality.
                                               <td>52.5</td>
                                             </tr>
                                             <tr>
-                                              <td>Llama-3-8B</td>
+                                              <td><u>Llama-3-8B</u></td>
                                               <td>20.1</td>
                                               <td>21.3</td>
                                               <td>54.8</td>
@@ -1123,7 +1029,7 @@ round of refinement to increase the data quality.
                                                 <td colspan="9" style="text-align:center"><strong>Trained only with \dataset (All evaluations are held-out)</strong></td>
                                             <tr>
                                                 <tr>
-                                                    <td>\model{7B}</td>
+                                                    <td>MAmmoTH2-7B</td>
                                                     <td>26.7</td>
                                                     <td>34.2</td>
                                                     <td>67.4</td>
@@ -1134,7 +1040,7 @@ round of refinement to increase the data quality.
                                                     <td>52.2</td>
                                                   </tr>
                                                   <tr bgcolor="#E0FFFF">
-                                                    <td>$\Delta$ over \e{Mistral}</td>
+                                                    <td>∆ over <u>Mistral</u></td>
                                                     <td>+7.5</td>
                                                     <td>+23.0</td>
                                                     <td>+31.2</td>
@@ -1145,7 +1051,7 @@ round of refinement to increase the data quality.
                                                     <td>+13.4</td>
                                                   </tr>
                                                   <tr>
-                                                    <td>\model{8B}</td>
+                                                    <td>MAmmoTH2-8B</td>
                                                     <td>29.7</td>
                                                     <td>33.4</td>
                                                     <td>67.9</td>
@@ -1156,7 +1062,7 @@ round of refinement to increase the data quality.
                                                     <td>53.1</td>
                                                   </tr>
                                                   <tr bgcolor="#E0FFFF">
-                                                    <td>$\Delta$ over \e{Llama3}</td>
+                                                    <td>∆ over <u>Llama3</u></td>
                                                     <td>+9.6</td>
                                                     <td>+12.1</td>
                                                     <td>+13.1</td>
@@ -1170,29 +1076,29 @@ round of refinement to increase the data quality.
                                                    <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K)</strong></td>
                                                  <tr>
                                                     <tr>
-                                                        <td>\modelplus{7B}</td>
+                                                        <td>MAmmoTH2-7B-Plus</td>
                                                         <td>29.2</td>
-                                                        <td>45.0</td>
-                                                        <td>84.7</td>
+                                                        <td><strong>45.0</strong></td>
+                                                        <td><strong>84.7</strong></td>
                                                         <td>30.3</td>
                                                         <td>64.5</td>
                                                         <td>63.1</td>
                                                         <td>83.0</td>
                                                         <td>57.1</td>
                                                       </tr>
-                                                      <tr bgcolor="#E0FFFF">
-                                                        <td>\modelplus{8B}</td>
-                                                        <td>32.5</td>
+                                                      <tr>
+                                                        <td>MAmmoTH2-8B-Plus</td>
+                                                        <td><strong>32.5</strong></td>
                                                         <td>42.8</td>
                                                         <td>84.1</td>
-                                                        <td>37.3</td>
-                                                        <td>65.7</td>
-                                                        <td>67.8</td>
-                                                        <td>83.4</td>
-                                                        <td>59.1</td>
+                                                        <td><strong>37.3</strong></td>
+                                                        <td><strong>65.7</strong></td>
+                                                        <td><strong>67.8</strong></td>
+                                                        <td><strong>83.4</strong></td>
+                                                        <td><strong>59.1</strong></td>
                                                       </tr>
-                                                      <tr>
-                                                        <td>$\Delta$ over best baseline</td>
+                                                      <tr bgcolor="#E0FFFF">
+                                                        <td>∆ over best baseline</td>
                                                         <td>+7.2</td>
                                                         <td>+0.7</td>
                                                         <td>+1.5</td>
@@ -1218,10 +1124,120 @@ round of refinement to increase the data quality.
         </div>
     </div>
 </section>
-
-
-
 <!--table2-->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Image6 carousel -->
+                                
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="item">
+                        <!-- Displaying an Image of Hybrid Instruction Tuning -->
+                        <img src="static\images\Figure_1.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
+                        <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
+                            Figure 6: Mistral-7B model performance improves with scaling instructions. Additionally, SFT Loss
+                            is a more effective learning approach compared to LM Loss.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End image6 carousel -->
+
+
+
+
+<!--ending WEBINSTRUCT-->
+
+   
+
+<!-- 
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container  is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Overall Results</h2>
+                        <div class="item">
+                            Your image here -->
+                            <!-- <img src="static/images/overall_results.png" alt="MY ALT TEXT" />
+                            <h2 class="subtitle has-text-centered">
+                                Figure 2: Overall results of 🦣MAmmoTH on the in-domain and out-of-domain datasets.
+                            </h2>
+                            <p>
+                                Overall, we can see that MAmmoTH and MAmmoTH-Coder are able to outperform the SoTA model at different scales. In general, the performance gain for OOD datasets is more significant than IND datasets. These results show us the potential of our models as
+                                a mathematical generalist. On several datasets, MAmmoTH-Coder-34B and MAmmoTH-70B are even surpassing closed-source LLMs (see more break down results below).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container  is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Where does the gain come from?</h2>
+                        <div class="item"> -->
+                            <!-- Your image here -->
+                            <!-- <img src="static/images/ablation_results.png" alt="MY ALT TEXT" />
+                            <h2 class="subtitle">
+                                Figure 3: Investigation of the influence of CoT \& PoT hybrid training on the 7B Llama-2 model. Key insights include: 1) The SoTA model, utilizing dataset-specific CoT fine-tuning on GSM and MATH, displays strong performance within its domains but struggles
+                                in OOD scenarios; 2) Diverse data sources in MathInstruct enable better math generalist model; 3) Fine-tuning on the PoT subsets generally outperforms fine-tuning on the CoT subsets; 4) Hybrid training yields the best-performing
+                                model.
+                            </h2>
+                            <p>
+                                In order to better understand what factors contribute to the great gain of 🦣MAmmoTH over existing baselines, we set up a group of control experiments in the Figure 3. We study the following setups:
+                                <ol>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - CoT):</b> This experiment aims to understand how much our curated CoT data could improve the generalization over the SoTA model WizardMath trained specifically on GSM + MATH. As can be seen,
+                                        while sacrificing accuracy on GSM + MATH by 3%, our CoT subset fine-tuning improves the overall nine-dataset accuracy from 27% to 32%. </li>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - PoT):</b> This experiment aims to understand the advantage of our PoT subset. As can be observed, our PoT subset fine-tuning can significantly improve the overall accuracy from 27% to 37.5%.
+                                        This ablation reflects the importance of unlocking the program generation capabilities of our model.</li>
+                                    <li>🦣<b>MAmmoTH (MathInstruct - Hybrid):</b> We further combine CoT and PoT as the hybrid training data to achieve the best overall performance of 45.4%. This combined gain comes from two aspects:
+                                        <ul style="list-style-type: disc;">
+                                            <li>
+                                                The CoT subset can help maintain the generic language-based reasoning skills to handle scenarios where PoT cannot handle well, e.g., the multi-choice questions in AQuA, SAT, and MMLU.
+                                            </li>
+                                            <li>
+                                                The PoT subset can teach the model how to utilize Python APIs to solve complex math problems with high precision, e.g., the MATH problems requiring complex computation.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol> -->
+
+
+
+
+
+                                <!-- We put some case studies in Appendix \ref{sec:case_study} to demonstrate the respective advantages of PoT and CoT in solving different types of math problems. To summarize, we attribute our substantial gain to: 1) diverse data sources covering different math fields and complexity levels and 2) a hybrid of CoT \& PoT instruction tuning strategy.  -->
+
+                            <!-- </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
 <!--table3-->
 <section class="hero">
     <div class="hero-body">
@@ -1294,8 +1310,8 @@ round of refinement to increase the data quality.
                                     <td>56.7</td>
                                     <td><strong>70.1</strong></td>
                                     <td><strong>59.3</strong></td>
-                                    <td><i>65.9</i></td>
-                                    <td><i>58.0</i></td>
+                                    <td><u>65.9</u></td>
+                                    <td><u>58.0</u></td>
                                 </tr>
                                 <tr>
                                     <td>Mixtral-8&times;7B-Instruct-v0.1</td>
@@ -1309,16 +1325,16 @@ round of refinement to increase the data quality.
                                 <tr>
                                  <tr>   
                                 <tr>
-                                    <td>\model-7B-Plus</td>
-                                    <td><i>72.1</i></td>
-                                    <td><i>65.9</i></td>
+                                    <td>MAmmoTH2-7B-Plus</td>
+                                    <td><u>72.1</u></td>
+                                    <td><u>65.9</u></td>
                                     <td>60.1</td>
                                     <td>50.4</td>
                                     <td><strong>66.1</strong></td>
                                     <td><strong>58.2</strong></td>
                                 </tr>
                                 <tr>
-                                    <td>\model-8B-Plus</td>
+                                    <td>MAmmoTH2-8B-Plus</td>
                                     <td>63.4</td>
                                     <td>57.9</td>
                                     <td>60.4</td>
@@ -1327,11 +1343,11 @@ round of refinement to increase the data quality.
                                     <td>53.3</td>
                                 </tr>
                                 <tr>
-                                    <td>\model-8&times;7B-Plus</td>
+                                    <td>MAmmoTH2-8x7B-Plus</td>
                                     <td>57.9</td>
                                     <td>53.7</td>
-                                    <td><i>68.7</i></td>
-                                    <td><i>56.9</i></td>
+                                    <td><u>68.7</u></td>
+                                    <td><u>56.9</u></td>
                                     <td>63.3</td>
                                     <td>55.3</td>
                                 </tr>
@@ -1439,25 +1455,25 @@ round of refinement to increase the data quality.
                                     <td><strong>70.6</strong></td>
                                 </tr>
                                 <tr>
-                                    <td>\modelplus{7B}</td>
+                                    <td>MAmmoTH2-7B-Plus</td>
                                     <td>7.88</td>
                                     <td>23.4</td>
                                     <td>14.6</td>
                                     <td>63.3</td>
                                 </tr>
                                 <tr>
-                                    <td>\modelplus{8B}</td>
+                                    <td>MAmmoTH2-8B-Plus</td>
                                     <td>7.95</td>
                                     <td>18.5</td>
                                     <td>16.6</td>
                                     <td>64.6</td>
                                 </tr>
                                 <tr>
-                                    <td>\modelplus{8x7B}</td>
-                                    <td><i>8.20</i></td>
+                                    <td>MAmmoTH2-8x7B-Plus</td>
+                                    <td><u>8.20</u></td>
                                     <td><strong>33.8</strong></td>
                                     <td><strong>32.6</strong></td>
-                                    <td><i>68.3</i></td>
+                                    <td><u>68.3</u></td>
                                 </tr>
                             </tbody>
                         </table>
