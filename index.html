@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>MAmmoTH</title>
+    <title>MAmmoTH2</title>
     <link rel="icon" type="image/x-icon" href="static/images/mammoth_icon.png">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -36,19 +36,61 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
 
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/main.js"></script>
-    <script defer src="static/js/fontawesome.all.min.js"></script>
-    <script src="static/js/bulma-carousel.min.js"></script>
-    <script src="static/js/bulma-slider.min.js"></script>
-    <script src="static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
-    <link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="static/js/jquery-3.5.1.js"></script>
-    <script type="text/javascript" charset="utf8" src="static/js/jquery.dataTables.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+  <script src="./data/results/data_setting.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+  <script src="./visualizer/data/data_public.js" defer></script>
 </head>
-
 <body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+        <a class="navbar-item" href="https://opencodeinterpreter.github.io/">
+            <b>OpenCodeInterpreter</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+            </a>
+          <a class="navbar-item" href="https://mmmu-benchmark.github.io/">
+            <b>MMMU</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://tiger-ai-lab.github.io/MAmmoTH/">
+            <b>MAmmoTH</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://osu-nlp-group.github.io/TableLlama/">
+            TableLlama 
+            <a class="navbar-item" href="https://osu-nlp-group.github.io/MagicBrush/">
+              MagicBrush
+            </a>
+            <a class="navbar-item" href="https://osu-nlp-group.github.io/Mind2Web/">
+              Mind2Web
+            </a>
+          </a>
+          
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
 
 
     <section class="hero">
@@ -209,17 +251,13 @@ distillation, providing a new perspective on building better instruction tuning 
                     <!-- Added inline style for right alignment -->
                     <h2 class="title is-3">Introduction</h2>
                     <div class="content has-text-justified">
-                        <!-- <p>
-                            Reasoning is a fundamental aspect of human cognition and problem-solving [Clark et al., 2018,
-Hendrycks et al., 2021a, Cobbe et al., 2021, Hendrycks et al., 2021b, Rein et al., 2023]. Proficiency in
-reasoning is essential for advancing scientific knowledge, developing new technologies, and making
-informed decisions in various contexts. Recently, large language models (LLMs) [Brown et al., 2020,
-Ouyang et al., 2022, Touvron et al., 2023a,b, Achiam et al., 2023, Team et al., 2023] have shown
-remarkable progress in various NLP tasks. However, their ability to perform complex reasoning
-tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering is still limited.
-
-                        </p> -->
-<!-- <p> -->
+                        Reasoning is crucial for problem-solving and advancing knowledge. While large language models (LLMs) have made strides in natural language processing (NLP), their ability in complex reasoning tasks remains limited. Efforts to enhance LLMs' reasoning include continued training on filtered documents and instruction tuning with supervised fine-tuning loss. However, datasets for instruction tuning are often limited and biased, prompting a need for scalable and diverse instruction data.
+<br>
+<br>
+                        To address this, we propose discovering instruction data from the web. We argue that vast amounts of high-quality instruction data exist in the web corpus, spanning various domains like math and science. Our three-step pipeline involves recalling documents from Common Crawl, extracting Q-A pairs, and refining them for quality. This approach yields 10 million instruction-response pairs, offering a scalable alternative to existing datasets.
+<br>
+<br>
+                        Validating our dataset's effectiveness, we trained models on various base models, significantly outperforming them on seven reasoning benchmarks. Further tuning on open-source instruction datasets enhances performance, showcasing strong generalization abilities. Our approach demonstrates cost-effectiveness compared to human-annotated datasets, offering promising results for future instruction tuning studies.
 <!-- Image2 carousel -->
 <section class="hero">
     <div class="hero-body">
@@ -247,85 +285,7 @@ tasks [Lin et al., 2024] in the domains of mathematics, science, and engineering
     </div>
 </section>
 
-<!-- <section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered"> -->
-                    <!-- Removed the title section -->
-                    <!-- <div class="content has-text-justified"> -->
-                        <!-- <p>
-                            Recent studies have extensively explored different approaches to enhance LLMs’ reasoning abilities
-after pre-training. The two main approaches are continued training and instruction tuning. Continued
-training focuses on training LLMs with language model loss on large-scale math or science-centric
-documents [Lewkowycz et al., 2022, Taylor et al., 2022, Azerbayev et al., 2023, Shao et al., 2024,
-Ying et al., 2024] recalled from the general web corpus. Instruction tuning, on the other hand, seeks
-to employ supervised fine-tuning loss on curated high-quality instruction-response pairs [Ouyang
-et al., 2022, Chung et al., 2024]. While human-annotated instruction datasets [Cobbe et al., 2021,
-Hendrycks et al., 2021b, Amini et al., 2019] are often limited in scale, recent studies [Yu et al., 2023,
-Yue et al., 2023, Tosh et al., 2024, Li et al., 2024, Tang et al., 2024] attempt to prompt state-of-the-
-art models like GPT-4 with seed data to synthesize large-scale instruction datasets. However, the
-synthesized instruction data becomes highly biased towards the seed data distribution and is prone to
-a high degree of hallucination.<p> -->
-<!-- <p>
-To address these limitations, we propose to discover naturally existing instruction data from
-the web. We argue that the web corpus (e.g., Common Crawl) already contains a vast amount of
-high-quality instruction data that can enhance LLM reasoning. For example, textbooks, exams,
-educational resources, and forums on the web contain a wealth of instruction-following pairs across
-various domains like math, science, engineering, and humanities. We believe such readily available
-instruction data is not only diverse but also of high quality. However, such instruction data is highly
-dispersed across the corpus, which makes it particularly challenging to discover.<p> -->
-<!-- <p>    
-In this paper, we aim to mine these instruction-response pairs from the web using a three-step pipeline.
-(1) Recall step: We create a diverse seed dataset by crawling several quiz websites. We use this
-seed data to train a fastText model [Joulin et al., 2016] and employ it to recall documents from
-Common Crawl [Computer, 2023]. GPT-4 is used to trim down the recalled documents by their root
-URL. We obtain 18M documents through this step. (2) Extract step: We utilize open-source LLMs
-like Mixtral [Jiang et al., 2024] to extract Q-A pairs from these documents, producing roughly 5M
-candidate Q-A pairs. (3) Refine step: After extraction, we further employ Mixtral-8×7B [Jiang et al.,
-2024] and Qwen-72B [Bai et al., 2023] to refine [Zheng et al., 2024b] these candidate Q-A pairs. This
-refinement operation aims to remove unrelated content, fix formality, and add missing explanations
-to the candidate Q-A pairs. This refinement operation is pivotal to maintaining the quality of the
-mined Q-A pairs. Eventually, we harvest a total of 10M instruction-response pairs through these
-steps. Unlike existing instruction-tuning dataset, our dataset WEBINSTRUCT is purely mined from
-the Web without any human crowdsourcing or GPT-4 distillation.<p>
-<p>
-To validate the effectiveness of our WEBINSTRUCT, we train MAmmoTH2, a family of open-sourced
-language models that are trained on a variety of base models, including Mistral-7B, Llama3-8B,
-Mixtral-8×7B, and Yi-34B. Our experiments demonstrate the effectiveness of scaling up instruction
-tuning on science reasoning tasks. On a range of held-out reasoning benchmarks including Theo-
-remQA, GSM8K, MATH, ARC-C, MMLU-STEM, GPQA and BBH, MAmmoTH2 exhibits remarkably
-better reasoning abilities compared to the base model. MAmmoTH2 boosts the performance of the base
-model significantly. For example, MAmmoTH2-7B boosts the performance of Mistral-7B by 5-31%
-across different datasets, while MAmmoTH2-34B boosts the Yi-34B base model by 6-24% across
-different datasets. Notably, WEBINSTRUCT does not contain any data from any of the evaluation
-benchmarks, highlighting the strong generalization of the instruction-tuned model. These findings
-reveal new perspectives on how to construct high-quality instruction dataset in scale without requiring
-crowdsourcing or distillation.   </p> -->
 
-    <!-- <p>
-    <p> 
-<p>  
-    To further enhance the performance of MAmmoTH2 on more general code generation, math rea-
-    soning and instruction-following tasks, we continue to tune it on several open-source instruction
-    datasets including OpenHermes2.5, Code-Feedback, Math-plus. The further enhanced model is
-    named MAmmoTH2-Plus, which exhibits strong performance across these general tasks. For example,
-    MAmmoTH2-7B-Plus achieves top performance on HumanEval and MBPP code generation bench-
-    marks, and MAmmoTH2-8×7B leads the AlpacaEval 2.0 and Arena Hard leaderboards for general
-    language understanding and instruction-following. The consistent gain of MAmmoTH2-Plus over the
-    official instruct models (e.g. Mixtral-Instruct-v0.1) further validates the effectiveness of our dataset
-    and training approach.         
-
-
-<p> -->
-
-
-                    <!-- </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <!--end begining introduction-->
 <!--begining WEBINSTRUCT-->
@@ -370,23 +330,10 @@ Step 3: Refine with the extracted Q-A pairs.
                     <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Recall from Common Crawl</h3>
                     <div class="content has-text-justified">
                         <p>
-                            Unlike previous math-centric approaches [Paster et al., 2023, Wang et al., 2023c, Shao et al., 2024],
-we aim for broad coverage disciplines like math, science, engineering, etc. Therefore, we need to
-carefully balance the seed data to ensure diversity. However, the public available training datasets are
-mostly limited to mathematics. To address this issue, we propose to crawl new exam problems from
-several educational websites like stemez.com, homeworkstudy.com, khanacademy.org. These sites
-contain diverse problems from different disciplines to help us ensure diversity.
-We crawled 100K seed data as the positive training examples and randomly selected 100K negative
-documents from CC [Computer, 2023] to train a fastText model [Joulin et al., 2016]. We use the
-trained fastText model to recall relevant documents. We employ the open-source fastText library with a vector dimension of 256 to train the model for 3 epochs, where the learning rate is 0.1, the
-maximum length of n-gram is 3, and the maximum number of word occurrences is 3. In the first stage,
-the trained fastText model recalls the top 100B documents from CC. The documents are grouped by
-their domains (root URL) and we only retain the domains with enough documents. We then prompt
-GPT-4 to scan through the domains and automatically select the ones which might contain instruction
-data. We use in-context learning and found that GPT-4 has achieved adequate success rate. Then,
-we further sample documents from the selected domains as positive, and sample documents from
-the non-selected domains & general Common Crawl are used as negative to re-train a better fastText
-classifier. The newly trained fastText classifier is used to recall the top 18M documents.
+                            To ensure diversity in our training data across various disciplines like math, science, and engineering, we propose crawling exam problems from educational websites such as stemez.com, homeworkstudy.com, and khanacademy.org. We collected 100K diverse seed examples and randomly selected 100K negative documents from Common Crawl (CC) for training a fastText model. Using the open-source fastText library with 256-dimensional vectors, we trained the model for 3 epochs with a learning rate of 0.1, allowing n-grams up to length 3, and capping word occurrences at 3.
+                        </p>
+                        <p>
+In the initial stage, the trained fastText model recalls the top 100B documents from CC, categorizing them by domain (root URL). We employ GPT-4 to identify domains likely to contain instructional content, achieving satisfactory results through in-context learning. Subsequently, we sample additional documents from these selected domains as positive examples and use documents from non-selected domains and the general CC as negative examples to refine the fastText classifier. The updated classifier then recalls the top 18M documents for further processing.
                         </p>
                         <p>
                             <!-- Image5 carousel -->
@@ -418,37 +365,15 @@ Most of the instruction data comes from tutoring websites, forums, and homework 
 
                         <div class="content has-text-justified">
                             <p>
-                                The recalled documents come from very diverse domains including forums, homework, quiz, and
-                                exam websites, etc. We observe that there exists a significant amount of naturally existing Q-A pairs
-                                in these documents. However, these Q-A pairs are interwoven with a high volume of noise tokens
-                                like ads, markups, boilerplate, etc.
-                            </p>
-                            <p>
-                                We first write pre-processing function to pre-extract useful content from recalled documents. This is
-by parsing the HTML of the recalled documents to strip off the unrelated content like site information,
-ads, HTML boilerplate, etc. This step helps us shorten the document length significantly for the next
-step. We then prompt Mixtral-8×7B [Jiang et al., 2024] to identify the text span (beginning and end)
-of question and answer pairs. Specifically, we provide five in-context examples to guide the model to
-do the extraction. We also allow the model to return void if there exist no natural question-answer
-pairs. In this stage, only 30% of the recalled documents were identified to contain naturally existing
-Q-A pairs, which leads to roughly 5M Q-A pairs as our candidates. However, these candidates still
-contain lots of unrelated content, formality issues. Also, a large portion of the extracted Q-A pairs do
-not contain any explanation for how the answer is derived. Therefore, we propose to perform another
-round of refinement to increase the data quality.
-                            <p>    
-                            <p>
-                                To avoid contamination, we follow previous work [Shao et al., 2024] to filter out web pages containing
-                                questions or answers to all of our evaluation benchmarks. Specifically, we filter out all the web pages
-                                that contain n-grams (n = 10) string matching with either the questions and the answer.
-
-                            <p>   
+                                Recalled documents contain diverse content from forums, homework, quizzes, and exams. Despite noise like ads and HTML, they contain valuable Q&A pairs. To extract useful content, we preprocess by parsing HTML to remove unrelated info. We then use Mixtral-8×7B to identify Q&A pairs, resulting in 5M candidates. However, many lack explanations. To improve quality, we refine further.We filter out web pages containing questions or answers to evaluation benchmarks to avoid contamination.
+                            </p> 
                         </div>
 
                         <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Q-A Pair Refinement</h3>
                         <div class="content has-text-justified">
                             <p>
                                 To further improve extracted Q-A pair candidates, we propose to refine them with LLMs. In this
-step, we prompt Mixtral-7B×8 [Jiang et al., 2024] and Qwen-72B [Bai et al., 2023] to reformat the
+step, we prompt Mixtral-7B×8 and Qwen-72B to reformat the
 extracted Q-A pairs. If the answer does not contain any explanation, we prompt the LLMs to complete
 the intermediate reasoning steps leading to the answer. We adopt two models to increase diversity.
 Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEBINSTRUCT.
@@ -480,18 +405,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                         <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Dataset Statistics</h3>
                         <div class="content has-text-justified">
                             <p>
-                                Here we list all the existing dataset in Table 1 and compare it with WEBINSTRUCT. We can observe
-that most SFT datasets are less than 1M samples, but with very high quality. XwinMath [Li et al.,
-2024] and OpenMathInstruct [Tosh et al., 2024] are the largest datasets to scale up to over 1M by
-GPT-4 synthesizing. However, the seed data is only based GSM and MATH, which leads to their
-narrow domain coverage. As is shown in Table 2, XwinMath and OpenMath can over-fit to these
-two benchmarks with poor performance on other benchmarks. In contrast, continue-training (CT)
-datasets are normally recalled from the web with much larger in size. They can normally exceed
-10B tokens and even rise to 120B tokens. However, training on these datasets can be much more
-expensive. Furthermore, these datasets lead to limited gain due to the much higher noise ratio than
-SFT datasets. Our WEBINSTRUCT strikes a good balance between scalability and quality. It almost
-approaches the scalability of the common CT datasets while maintaining the high quality through the
-three-step construction pipeline. This makes our dataset unique from other alteranatives.
+                                In Table 1, existing datasets are compared with WEBINSTRUCT. Most SFT datasets contain less than 1M samples of very high quality. XwinMath and OpenMathInstruct are the largest datasets, surpassing 1M samples through GPT-4 synthesis. However, they suffer from narrow domain coverage, mainly based on GSM and MATH. This results in over-fitting to these benchmarks, as shown in Table 2. On the other hand, CT datasets, often sourced from the web, are much larger, exceeding 10B tokens and even reaching 120B tokens, but are costlier to train and have a higher noise ratio. WEBINSTRUCT strikes a balance between scalability and quality, nearing the scalability of CT datasets while maintaining high quality through a three-step construction pipeline. This uniqueness sets it apart from other alternatives.
                             </p>
 <!--table1-->
 <section class="hero">
@@ -499,7 +413,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered is-fifths-fifths">
-                    <h2 class="title is-3">Table 1</h2>
+                    <h2 class="title is-3"></h2>
                     <div class="content has-text-justified">
                         <table id="myTable">
                           
@@ -677,7 +591,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered is-fifths-fifths">
-                    <h2 class="title is-3">Table 2</h2>
+                    <h2 class="title is-3"></h2>
                     <div class="content has-text-justified">
                         <table id="myTable">
                             <thead>
@@ -851,11 +765,11 @@ three-step construction pipeline. This makes our dataset unique from other alter
                                             <td><strong>34.1</strong></td>
                                             <td><strong>47.0</strong></td>
                                             <td><strong>86.4</strong></td>
-                                            <td><strong>37.8</strong></td>
+                                            <td><strong>37.4</strong></td>
                                             <td><strong>72.4</strong></td>
                                             <td><strong>74.1</strong></td>
                                             <td><strong>88.4</strong></td>
-                                            <td><strong>62.9</strong></td>
+                                            <td><strong>62.8</strong></td>
                                           </tr>
                                           <tr bgcolor="#E0FFFF">
                                             <td>∆ over Qwen-1.5-110B</td>
@@ -866,7 +780,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
                                             <td>-1.0</td>
                                             <td>-0.7</td>
                                             <td>-4.0</td>
-                                            <td>-0.7</td>
+                                            <td>-0.8</td>
                                           </tr>
                                         <tr>
                                             <td colspan="9" style="text-align:center"><strong>Parameter Size = 7B or 8B</strong></td>
@@ -1080,11 +994,11 @@ three-step construction pipeline. This makes our dataset unique from other alter
                                                         <td>29.2</td>
                                                         <td><strong>45.0</strong></td>
                                                         <td><strong>84.7</strong></td>
-                                                        <td>36.8</td>
+                                                        <td>30.3</td>
                                                         <td>64.5</td>
                                                         <td>63.1</td>
                                                         <td>83.0</td>
-                                                        <td>58.0</td>
+                                                        <td>57.1</td>
                                                       </tr>
                                                       <tr>
                                                         <td>MAmmoTH2-8B-Plus</td>
@@ -1244,7 +1158,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered is-fifths-fifths">
-                    <h2 class="title is-3">Table 3</h2>
+                    <h2 class="title is-3"></h2>
                     <div class="content has-text-justified">
                         <table id="myTable">
                             <thead>
@@ -1355,7 +1269,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
                             
                         </table>
                         <capion>Table 3:Code generation results of different models. Baseline results are copied from the
-                                EvalPlus [Liu et al., 2024] leaderboard..</caption>
+                                EvalPlus leaderboard.</caption>
 
                     </div>
                 </div>
@@ -1371,7 +1285,7 @@ three-step construction pipeline. This makes our dataset unique from other alter
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered is-fifths-fifths">
-                    <h2 class="title is-3">Table 4</h2>
+                    <h2 class="title is-3"></h2>
                     <div class="content has-text-justified">
                         <table id="myTable">
                             <thead>
@@ -1489,6 +1403,24 @@ three-step construction pipeline. This makes our dataset unique from other alter
     </div>
 </section>
 
+<footer class="footer">
+    <!-- <div class="container"> -->
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is website adapted from <a href="https://tiger-ai-lab.github.io/MAmmoTH/">MAmmoTH</a> and <a href="https://mmmu.github.io/">MMMU</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  
+  </footer>
 
 <!--table4-->
 </html>
