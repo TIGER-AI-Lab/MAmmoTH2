@@ -1,20 +1,20 @@
 # MAmmoTH2
 
-Instruction tuning improves the reasoning abilities of large language models (LLMs), with data quality and scalability being the crucial factors. Most instruction tuning data come from human crowd-sourcing or GPT-4 distillation. We propose a paradigm to efficiently harvest 10 million naturally existing instruction data from the pre-training web corpus to enhance LLM reasoning. Our approach involves (1) recalling relevant documents, (2) extracting instruction-response pairs, and (3) refining the extracted pairs using open-source LLMs. Fine-tuning base LLMs on this dataset, we build MAmmoTH2 models, which significantly boost performance on reasoning benchmarks. Notably, MAmmoTH2-7B’s (Mistral) performance increases from 11% to 34% on MATH and from 36% to 67% on GSM8K without training on any in-domain data. Further training MAmmoTH2 on public instruction tuning datasets yields MAmmoTH2-Plus, achieving state-of-the-art performance on several reasoning and chatbot benchmarks. Our work demonstrates how to harvest large- scale, high-quality instruction data without costly human annotation or GPT-4 distillation, providing a new perspective on building better instruction tuning data.
+This repo contains the code, data, and models for "[MAmmoTH2: Scaling Instructions from the Web](https://arxiv.org/abs/2405.03548)". Our paper proposes a new paradigm to scale up high-quality instruction data from the web.
+
+<div align="center">
+ 🔥 🔥 🔥 Check out our <a href = "https://tiger-ai-lab.github.io/MAmmoTH2/">[Project Page]</a> for more results and analysis!
+</div>
+
 
 <p align="center">
-
 <div style="display: flex; justify-content: center;">
     <img src="https://tiger-ai-lab.github.io/MAmmoTH2/static/images/teaser_front.jpg" width:auto; margin-right:10px">
 </div>
 </p>
 
-## WEBINSTRUCT
-Reasoning is crucial for problem-solving and advancing knowledge. While large language models (LLMs) have made strides in natural language processing (NLP), their ability in complex reasoning tasks remains limited. Efforts to enhance LLMs' reasoning include continued training on filtered documents and instruction tuning with supervised fine-tuning loss. However, datasets for instruction tuning are often limited and biased, prompting a need for scalable and diverse instruction data.
-
-To address this, we propose discovering instruction data from the web. We argue that vast amounts of high-quality instruction data exist in the web corpus, spanning various domains like math and science. Our three-step pipeline involves recalling documents from Common Crawl, extracting Q-A pairs, and refining them for quality. This approach yields 10 million instruction-response pairs, offering a scalable alternative to existing datasets.
-
-Validating our dataset's effectiveness, we trained models on various base models, significantly outperforming them on seven reasoning benchmarks. Further tuning on open-source instruction datasets enhances performance, showcasing strong generalization abilities. Our approach demonstrates cost-effectiveness compared to human-annotated datasets, offering promising results for future instruction tuning studies.
+## WebInstruct
+We propose discovering instruction data from the web. We argue that vast amounts of high-quality instruction data exist in the web corpus, spanning various domains like math and science. Our three-step pipeline involves recalling documents from Common Crawl, extracting Q-A pairs, and refining them for quality. This approach yields 10 million instruction-response pairs, offering a scalable alternative to existing datasets. We name our curated dataset as WebInstruct.
 
 <p align="center">
 
