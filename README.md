@@ -13,12 +13,8 @@ This repo contains the code, data, and models for "[MAmmoTH2: Scaling Instructio
 </div>
 </p>
 
-## WEBINSTRUCT
-Reasoning is crucial for problem-solving and advancing knowledge. While large language models (LLMs) have made strides in natural language processing (NLP), their ability in complex reasoning tasks remains limited. Efforts to enhance LLMs' reasoning include continued training on filtered documents and instruction tuning with supervised fine-tuning loss. However, datasets for instruction tuning are often limited and biased, prompting a need for scalable and diverse instruction data.
-
-To address this, we propose discovering instruction data from the web. We argue that vast amounts of high-quality instruction data exist in the web corpus, spanning various domains like math and science. Our three-step pipeline involves recalling documents from Common Crawl, extracting Q-A pairs, and refining them for quality. This approach yields 10 million instruction-response pairs, offering a scalable alternative to existing datasets.
-
-Validating our dataset's effectiveness, we trained models on various base models, significantly outperforming them on seven reasoning benchmarks. Further tuning on open-source instruction datasets enhances performance, showcasing strong generalization abilities. Our approach demonstrates cost-effectiveness compared to human-annotated datasets, offering promising results for future instruction tuning studies.
+## WebInstruct
+We propose discovering instruction data from the web. We argue that vast amounts of high-quality instruction data exist in the web corpus, spanning various domains like math and science. Our three-step pipeline involves recalling documents from Common Crawl, extracting Q-A pairs, and refining them for quality. This approach yields 10 million instruction-response pairs, offering a scalable alternative to existing datasets. We name our curated dataset as WebInstruct.
 
 <p align="center">
 
