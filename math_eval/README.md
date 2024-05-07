@@ -19,3 +19,5 @@ bash run_8B_plus.sh
 ```
 bash run_7B_moe_plus.sh
 ```
+
+The results will fluctuate depending on the library version and devices. Please refer to our requirements.txt for our exact version.
