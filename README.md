@@ -3,7 +3,7 @@
 This repo contains the code, data, and models for "[MAmmoTH2: Scaling Instructions from the Web](https://arxiv.org/abs/2405.03548)". Our paper proposes a new paradigm to scale up high-quality instruction data from the web.
 
 <div align="center">
- 🔥 🔥 🔥 Check out our <a href = "https://tiger-ai-lab.github.io/MAmmoTH2/">[Project Page]</a> for more results and analysis!
+ 🔥 🔥 🔥 Check out our <a href = "https://tiger-ai-lab.github.io/MAmmoTH2/">[Project Page]</a> for more results and analysis! Also, our <a href="https://huggingface.co/spaces/TIGER-Lab/MAmmoTH2">Demo</a> is online!
 </div>
 
 
