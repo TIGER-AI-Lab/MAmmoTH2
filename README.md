@@ -30,7 +30,7 @@ Validating our dataset's effectiveness, we trained models on various base models
 | **Model**            | **Dataset**                                            | **Download**   |
 | :------------:       | :------------:                                         | :------------: |
 | MAmmoTH2-8x7B        | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B)   |
-| MAmmoTH2-8x7B        | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-34B)   |
+| MAmmoTH2-34B         | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-34B)   |
 | MAmmoTH2-7B          | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-7B)   |
 | MAmmoTH2-8B          | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8B)   |
 | MAmmoTH2-8x7B-Plus   | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B-Plus)   |
