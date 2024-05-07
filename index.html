@@ -295,11 +295,11 @@ distillation, providing a new perspective on building better instruction tuning 
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <!-- Added inline style for right alignment -->
-                    <h2 class="title is-3">WEBINSTRUCT</h2>
+                    <h2 class="title is-3">WebInstruct</h2>
                     
                     <div class="content has-text-justified">
                         <p>
-                            In this section, we outline the process of constructing WEBINSTRUCT from the web corpus. Specif-
+                            In this section, we outline the process of constructing WebInstruct from the web corpus. Specif-
                             ically, we divide the data collection pipeline into two stages: (1) high-quality data recall from the
                             web corpus, and (2) Q-A pair extraction and (3) Q-A pair refinement. We depict the full pipeline
                             in Figure 3 and provide an example for extraction and refinement in Figure 4
@@ -376,7 +376,7 @@ Most of the instruction data comes from tutoring websites, forums, and homework 
 step, we prompt Mixtral-7B×8 and Qwen-72B to reformat the
 extracted Q-A pairs. If the answer does not contain any explanation, we prompt the LLMs to complete
 the intermediate reasoning steps leading to the answer. We adopt two models to increase diversity.
-Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEBINSTRUCT.
+Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WebInstruct.
                             </p>
                         </div>
                         <div>
@@ -391,7 +391,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                                 <!-- Displaying an Image of Hybrid Instruction Tuning -->
                                 <img src="static\images\example.jpg" alt="Hybrid Instruction Tuning of MAmmoTH2-Plus" />
                                 <h2 class="subtitle" style="font-size: 16px; text-align: center; color:#888888;font-weight: normal;">
-                                    Figure 4: An illustrating example from WEBINSTRUCT for the extraction and refine step
+                                    Figure 4: An illustrating example from WebInstruct for the extraction and refine step
                                 </h2>
                             </div>
                         </div>
@@ -405,7 +405,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                         <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Dataset Statistics</h3>
                         <div class="content has-text-justified">
                             <p>
-                                In Table 1, existing datasets are compared with WEBINSTRUCT. Most SFT datasets contain less than 1M samples of very high quality. XwinMath and OpenMathInstruct are the largest datasets, surpassing 1M samples through GPT-4 synthesis. However, they suffer from narrow domain coverage, mainly based on GSM and MATH. This results in over-fitting to these benchmarks, as shown in Table 2. On the other hand, CT datasets, often sourced from the web, are much larger, exceeding 10B tokens and even reaching 120B tokens, but are costlier to train and have a higher noise ratio. WEBINSTRUCT strikes a balance between scalability and quality, nearing the scalability of CT datasets while maintaining high quality through a three-step construction pipeline. This uniqueness sets it apart from other alternatives.
+                                In Table 1, existing datasets are compared with WebInstruct. Most SFT datasets contain less than 1M samples of very high quality. XwinMath and OpenMathInstruct are the largest datasets, surpassing 1M samples through GPT-4 synthesis. However, they suffer from narrow domain coverage, mainly based on GSM and MATH. This results in over-fitting to these benchmarks, as shown in Table 2. On the other hand, CT datasets, often sourced from the web, are much larger, exceeding 10B tokens and even reaching 120B tokens, but are costlier to train and have a higher noise ratio. WebInstruct strikes a balance between scalability and quality, nearing the scalability of CT datasets while maintaining high quality through a three-step construction pipeline. This uniqueness sets it apart from other alternatives.
                             </p>
 <!--table1-->
 <section class="hero">
@@ -563,7 +563,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                                     <td>Recalled from Web</td>
                                 </tr>
                                 <tr>
-                                    <td>WEBINSTRUCT</td>
+                                    <td>WebInstruct</td>
                                     <td>(10M) 5B</td>
                                     <td>Math & Sci.</td>
                                     <td>SFT</td>
@@ -711,7 +711,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                                     <td>46.4</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="9" style="text-align:center"><strong>Trained only with WEBINSTRUCT (All evaluations are held-out)</strong></td>
+                                    <td colspan="9" style="text-align:center"><strong>Trained only with WebInstruct (All evaluations are held-out)</strong></td>
                                 <tr> 
                                     <tr>
                                         <td>MAmmoTH2-34B</td>
@@ -940,7 +940,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
                                               <td>53.4</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="9" style="text-align:center"><strong>Trained only with WEBINSTRUC (All evaluations are held-out)</strong></td>
+                                                <td colspan="9" style="text-align:center"><strong>Trained only with WebInstruct (All evaluations are held-out)</strong></td>
                                             <tr>
                                                 <tr>
                                                     <td>MAmmoTH2-7B</td>
@@ -1069,87 +1069,6 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset WEB
 </section>
 
 <!-- End image6 carousel -->
-
-
-
-
-<!--ending WEBINSTRUCT-->
-
-   
-
-<!-- 
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div class="container  is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <h2 class="title is-3">Overall Results</h2>
-                        <div class="item">
-                            Your image here -->
-                            <!-- <img src="static/images/overall_results.png" alt="MY ALT TEXT" />
-                            <h2 class="subtitle has-text-centered">
-                                Figure 2: Overall results of 🦣MAmmoTH on the in-domain and out-of-domain datasets.
-                            </h2>
-                            <p>
-                                Overall, we can see that MAmmoTH and MAmmoTH-Coder are able to outperform the SoTA model at different scales. In general, the performance gain for OOD datasets is more significant than IND datasets. These results show us the potential of our models as
-                                a mathematical generalist. On several datasets, MAmmoTH-Coder-34B and MAmmoTH-70B are even surpassing closed-source LLMs (see more break down results below).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- <section class="hero is-small">
-        <div class="hero-body">
-            <div class="container  is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <h2 class="title is-3">Where does the gain come from?</h2>
-                        <div class="item"> -->
-                            <!-- Your image here -->
-                            <!-- <img src="static/images/ablation_results.png" alt="MY ALT TEXT" />
-                            <h2 class="subtitle">
-                                Figure 3: Investigation of the influence of CoT \& PoT hybrid training on the 7B Llama-2 model. Key insights include: 1) The SoTA model, utilizing dataset-specific CoT fine-tuning on GSM and MATH, displays strong performance within its domains but struggles
-                                in OOD scenarios; 2) Diverse data sources in MathInstruct enable better math generalist model; 3) Fine-tuning on the PoT subsets generally outperforms fine-tuning on the CoT subsets; 4) Hybrid training yields the best-performing
-                                model.
-                            </h2>
-                            <p>
-                                In order to better understand what factors contribute to the great gain of 🦣MAmmoTH over existing baselines, we set up a group of control experiments in the Figure 3. We study the following setups:
-                                <ol>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - CoT):</b> This experiment aims to understand how much our curated CoT data could improve the generalization over the SoTA model WizardMath trained specifically on GSM + MATH. As can be seen,
-                                        while sacrificing accuracy on GSM + MATH by 3%, our CoT subset fine-tuning improves the overall nine-dataset accuracy from 27% to 32%. </li>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - PoT):</b> This experiment aims to understand the advantage of our PoT subset. As can be observed, our PoT subset fine-tuning can significantly improve the overall accuracy from 27% to 37.5%.
-                                        This ablation reflects the importance of unlocking the program generation capabilities of our model.</li>
-                                    <li>🦣<b>MAmmoTH (MathInstruct - Hybrid):</b> We further combine CoT and PoT as the hybrid training data to achieve the best overall performance of 45.4%. This combined gain comes from two aspects:
-                                        <ul style="list-style-type: disc;">
-                                            <li>
-                                                The CoT subset can help maintain the generic language-based reasoning skills to handle scenarios where PoT cannot handle well, e.g., the multi-choice questions in AQuA, SAT, and MMLU.
-                                            </li>
-                                            <li>
-                                                The PoT subset can teach the model how to utilize Python APIs to solve complex math problems with high precision, e.g., the MATH problems requiring complex computation.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ol> -->
-
-
-
-
-
-                                <!-- We put some case studies in Appendix \ref{sec:case_study} to demonstrate the respective advantages of PoT and CoT in solving different types of math problems. To summarize, we attribute our substantial gain to: 1) diverse data sources covering different math fields and complexity levels and 2) a hybrid of CoT \& PoT instruction tuning strategy.  -->
-
-                            <!-- </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
 
 
 <!--table3-->
