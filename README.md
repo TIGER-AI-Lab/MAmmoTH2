@@ -79,4 +79,16 @@ For the 7B/8B-scale models:
 | MAmmoTH2-8B-Plus        | 32.5      | 42.8 | 84.1  | 37.3 | 65.7    | 67.8 | 83.4  | 59.1 |
 
 ## Evaluation Command
-Coming soon!
+Please refer to https://github.com/TIGER-AI-Lab/MAmmoTH2/tree/main/math_eval. 
+
+## Cite our paper
+Please cite our paper if you use our data, model or code. Please also kindly cite the original dataset papers.
+```
+@article{yue2024mammoth2,
+  title={MAmmoTH2: Scaling Instructions from the Web},
+  author={Xiang Yue, Tuney Zheng, Ge Zhang, Wenhu Chen},
+  journal={arXiv preprint arXiv:2405.03548},
+  year={2024}
+}
+```
+
