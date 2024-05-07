@@ -15,7 +15,7 @@ python run_open.py \
 # Running GSM8K
 
 ```
-dataset='math'
+dataset='gsm8k'
 
 python run_open.py \
   --model [HF_MODEL] \
