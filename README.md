@@ -5,7 +5,7 @@ Instruction tuning improves the reasoning abilities of large language models (LL
 <p align="center">
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://tiger-ai-lab.github.io/MAmmoTH2/static/images/teaser_front.jpg" style="height:300px; width:auto; margin-right:10px">
+    <img src="https://tiger-ai-lab.github.io/MAmmoTH2/static/images/teaser_front.jpg" width:auto; margin-right:10px">
 </div>
 </p>
 
