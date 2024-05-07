@@ -43,7 +43,20 @@ python run_open.py \
 ```
 dataset='gpqa_diamond'
 
-python run_hoice.py \
+python run_choice.py \
+  --model [HF_MODEL] \
+  --shots 5 \
+  --dataset $dataset \
+  --use_vllm \
+  --form short
+```
+
+# Running MMLU-STEM
+
+```
+dataset='gpqa_diamond'
+
+python run_choice.py \
   --model [HF_MODEL] \
   --shots 5 \
   --dataset $dataset \
