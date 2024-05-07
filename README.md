@@ -27,14 +27,14 @@ Validating our dataset's effectiveness, we trained models on various base models
 
 <div align="center">
 
-| **Model**            | **Dataset**                                            | **Download**   |
-| :------------:       | :------------:                                         | :------------: |
-| MAmmoTH2-8x7B        | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B)   |
-| MAmmoTH2-7B          | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-7B)   |
-| MAmmoTH2-8B          | WebInstruct                                            | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8B)   |
-| MAmmoTH2-8x7B-Plus   | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B-Plus)   |
-| MAmmoTH2-7B-Plus     | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-7B-Plus)   |
-| MAmmoTH2-8B-Plus     | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8-Plus)   |
+| **Model**            | **Dataset**                                            | **Init Model** | **Download**   |
+| :------------:       | :------------:                                         | :------------: | :------------: |
+| MAmmoTH2-8x7B        | WebInstruct                                            | Mixtral-8x7B   | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B)   |
+| MAmmoTH2-7B          | WebInstruct                                            | Mistral-7B-v0.2| [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-7B)   |
+| MAmmoTH2-8B          | WebInstruct                                            | Llama-3-base   | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8B)   |
+| MAmmoTH2-8x7B-Plus   | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | MAmmoTH2-8x7B  | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8x7B-Plus)   |
+| MAmmoTH2-7B-Plus     | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | MAmmoTH2-7B    | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-7B-Plus)   |
+| MAmmoTH2-8B-Plus     | WebInstruct + OpenHermes2.5 + CodeFeedback + Math-Plus | MAmmoTH2-8B    | [🤗 HuggingFace](https://huggingface.co/TIGER-Lab/MAmmoTH2-8-Plus)   |
 
 </div>
 
