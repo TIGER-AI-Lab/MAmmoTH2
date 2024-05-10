@@ -71,8 +71,6 @@ if __name__ == "__main__":
         filename = filename + '_' + args.dataset
         filename += '_' + f'{args.shots}shots' + '_' + args.form
         filename += f'_length{args.model_max_length}'
-        if args.cot_backup:
-            filename += '_CoTBackup'
         filename += '_' + suffix
         args.output = f'outputs/{filename}.jsonl'
         print('Writing the output to', args.output)
