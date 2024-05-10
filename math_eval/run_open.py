@@ -11,7 +11,6 @@ from vllm import LLM, SamplingParams
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", default='', type=str)
 parser.add_argument("--output", default='', type=str)
-parser.add_argument("--stem_flan_type", default='', choices=['', 'pot_prompt'], type=str)
 parser.add_argument("--dtype", default='bfloat16', type=str)
 parser.add_argument("--dataset", required=True, type=str)
 parser.add_argument("--form", default='alpaca', type=str)
@@ -34,7 +33,7 @@ def get_seperation_trigger(dataset: str):
 
 def run_question_answer(questions: list, groundtruths: list, tasks: list):
     assert len(questions) == len(groundtruths) == len(tasks)
-    used_examples = get_examples(tasks, args.shots, args.stem_flan_type)
+    used_examples = get_examples(tasks, args.shots, '')
     prompt_prefixs = [get_prompt(example, args.form) for example in used_examples]
     input_strs = [p[0] + p[1].format(query=q) for p, q in zip(prompt_prefixs, questions)]
 
@@ -66,7 +65,7 @@ if __name__ == "__main__":
 
     correct, wrong = 0, 0
     if not args.output:
-        suffix = 'PoT' if 'pot' in args.stem_flan_type.lower() else 'CoT'
+        suffix = 'CoT'
         filename = args.model.strip('/').split('/')[-1].replace('-', '_')
         if filename.startswith('checkpoint'):
             filename = args.model.strip('/').split('/')[-2].replace('-', '_') + '__' + filename
@@ -83,7 +82,7 @@ if __name__ == "__main__":
     loader = BatchDatasetLoader(args.dataset, -1)
 
     questions, groundtruths, tasks = loader[0]
-    processed_questions = utils.process_question_with_flan_tag(questions, args.stem_flan_type)
+    processed_questions = utils.process_question_with_flan_tag(questions, '')
 
     returned_values = run_question_answer(processed_questions, groundtruths, tasks)
 
