@@ -19,7 +19,6 @@ parser.add_argument("--batch_size", default=8, type=int)
 parser.add_argument("--print", action='store_true', default=False)
 parser.add_argument("--form", default='alpaca_mc', type=str)
 parser.add_argument("--model_max_length", default=2048, type=int)
-parser.add_argument("--cot_backup", action='store_true', default=False)
 parser.add_argument("--dataset", 
                     required=True, 
                     choices=['aqua', 'sat', 'mmlu_stem', 'gpqa_diamond', 'gpqa_main', 'gpqa_extended', 'arc'], 
