@@ -32,7 +32,7 @@ def get_seperation_trigger(dataset: str):
     return triggers
 
 
-def run_question_answer(questions: list, groundtruths: list, tasks: list, collect_rerun: bool = False):
+def run_question_answer(questions: list, groundtruths: list, tasks: list):
     assert len(questions) == len(groundtruths) == len(tasks)
     used_examples = get_examples(tasks, args.shots, args.stem_flan_type)
     prompt_prefixs = [get_prompt(example, args.form) for example in used_examples]
@@ -43,8 +43,6 @@ def run_question_answer(questions: list, groundtruths: list, tasks: list, collec
 
     # We need to collect the values and possibly the rerun questions;
     returned_value = []
-    rerun_questions = []
-    rerun_groundtruths = []
     for output, question, groundtruth in zip(outputs, questions, groundtruths):
         if 'print(' in output:
             output = output.split("### Instruction")[0]
@@ -54,19 +52,9 @@ def run_question_answer(questions: list, groundtruths: list, tasks: list, collec
         else:
             answer = utils.answer_clean(args.dataset, get_seperation_trigger(args.dataset), output)
 
-        if answer == "" and collect_rerun:
-            rerun_questions.append(utils.remove_flan_tag(question, args.stem_flan_type))
-            # print('Adding back', rerun_questions[-1])
-            rerun_groundtruths.append(groundtruth)
-            continue
-
         returned_value.append((question, output, answer, groundtruth))
 
-    if collect_rerun:
-        assert len(returned_value) + len(rerun_questions) == len(questions) == len(groundtruths)
-        return returned_value, rerun_questions, rerun_groundtruths
-    else:
-        return returned_value
+    return returned_value
 
 
 if __name__ == "__main__":
@@ -97,18 +85,7 @@ if __name__ == "__main__":
     questions, groundtruths, tasks = loader[0]
     processed_questions = utils.process_question_with_flan_tag(questions, args.stem_flan_type)
 
-    if args.stem_flan_type == 'pot_prompt' and args.cot_backup:
-        # if there is hybrid decoding, we try pot fist and then cot
-        returned_values, rerun_questions, rerun_groundtruths = run_question_answer(
-            processed_questions, groundtruths, tasks, collect_rerun=True)
-        if rerun_questions:
-            # if things are not working well
-            processed_questions = utils.process_question_with_flan_tag(rerun_questions, "")
-            tmp = run_question_answer(processed_questions, rerun_groundtruths, tasks, collect_rerun=False)
-            returned_values += tmp
-    else:
-        # only cot_prompt or pot_prompt, then we don't need to rerun
-        returned_values = run_question_answer(processed_questions, groundtruths, tasks, collect_rerun=False)
+    returned_values = run_question_answer(processed_questions, groundtruths, tasks)
 
     for question, output, answer, groundtruth in returned_values:
         if isinstance(groundtruth, str):
