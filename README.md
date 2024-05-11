@@ -86,7 +86,7 @@ Please cite our paper if you use our data, model or code. Please also kindly cit
 ```
 @article{yue2024mammoth2,
   title={MAmmoTH2: Scaling Instructions from the Web},
-  author={Xiang Yue, Tuney Zheng, Ge Zhang, Wenhu Chen},
+  author={Yue, Xiang and Zheng, Tuney and Zhang, Ge and Chen, Wenhu},
   journal={arXiv preprint arXiv:2405.03548},
   year={2024}
 }
