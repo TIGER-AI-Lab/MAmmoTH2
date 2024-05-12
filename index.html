@@ -407,7 +407,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                         <h3 class="subtitle" style="font-size: 1.2em; text-align: left; color: black;">Dataset Statistics</h3>
                         <div class="content has-text-justified">
                             <p>
-                                In Table 1, existing datasets are compared with WebInstruct. Most SFT datasets contain less than 1M samples of very high quality. XwinMath and OpenMathInstruct are the largest datasets, surpassing 1M samples through GPT-4 synthesis. However, they suffer from narrow domain coverage, mainly based on GSM and MATH. This results in over-fitting to these benchmarks, as shown in Table 2. On the other hand, CT datasets, often sourced from the web, are much larger, exceeding 10B tokens and even reaching 120B tokens, but are costlier to train and have a higher noise ratio. WebInstruct strikes a balance between scalability and quality, nearing the scalability of CT datasets while maintaining high quality through a three-step construction pipeline. This uniqueness sets it apart from other alternatives.
+                                In Table 1, existing datasets are compared with WebInstruct. Most SFT datasets contain less than 1M samples of very high quality. XwinMath and OpenMathInstruct are the largest datasets, surpassing 1M samples through GPT-4/Mixtral synthesis. However, they suffer from narrow domain coverage, mainly based on GSM and MATH. This results in over-fitting to these benchmarks, as shown in Table 2. On the other hand, CT datasets, often sourced from the web, are much larger, exceeding 10B tokens and even reaching 120B tokens, but are costlier to train and have a higher noise ratio. WebInstruct strikes a balance between scalability and quality, nearing the scalability of CT datasets while maintaining high quality through a three-step construction pipeline. This uniqueness sets it apart from other alternatives.
                             </p>
 <!--table1-->
 <section class="hero">
@@ -485,7 +485,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                                     <td>395K</td>
                                     <td>Math</td>
                                     <td>SFT</td>
-                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                    <td>GPT-3.5-Turbo GSM+MATH Synthesis</td>
                                   </tr>
                                   <tr>
                                     <td>XwinMath</td>
@@ -499,7 +499,7 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                                     <td>1.8M</td>
                                     <td>Math</td>
                                     <td>SFT</td>
-                                    <td>GPT4 GSM+MATH Synthesis</td>
+                                    <td>Mixtral GSM+MATH Synthesis</td>
                                   </tr>
                             </tbody>
                         </table>
