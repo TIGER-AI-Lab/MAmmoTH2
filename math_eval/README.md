@@ -3,6 +3,7 @@
 ## Enter the eval folder
 ```
 cd math_eval
+pip install -r requirements.txt
 ```
 
 ## To reproduce 7B-plus results
