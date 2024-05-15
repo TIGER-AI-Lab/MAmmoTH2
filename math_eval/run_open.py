@@ -83,7 +83,7 @@ if __name__ == "__main__":
 
     returned_values = run_question_answer(processed_questions, groundtruths, tasks)
 
-    for question, output, answer, groundtruth in returned_values:
+    for (question, output, answer, groundtruth), task in zip(returned_values, tasks):
         if isinstance(groundtruth, str):
             groundtruth = [groundtruth]
         if utils.compare_answer_with_groundtruth(answer, *groundtruth):
@@ -99,7 +99,7 @@ if __name__ == "__main__":
             'correct': groundtruth,
             'solution': output,
             'pred': answer,
-            'task': args.dataset
+            'task': task
         }
 
         file_handle.write(json.dumps(example) + '\n')
