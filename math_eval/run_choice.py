@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     returned_values = run_question_answer(processed_questions, groundtruths, tasks)
 
-    for question, output, answer, groundtruth in returned_values:
+    for (question, output, answer, groundtruth), task in zip(returned_values, tasks):
         # If the answer is not an option at all.
         if answer not in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']:
             options = utils.recover_options(question, combined=True)
@@ -106,7 +106,7 @@ if __name__ == "__main__":
             'correct': groundtruth,
             'solution': output,
             'pred': answer,
-            'task': args.dataset,
+            'task': task,
         }
 
         file_handle.write(json.dumps(example) + '\n')
