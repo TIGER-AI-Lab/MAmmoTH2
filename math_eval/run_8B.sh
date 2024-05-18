@@ -40,7 +40,7 @@ python run_choice.py \
   --model $model \
   --shots 5 \
   --dataset $dataset \
-  --form short
+  --form short:step
 
 dataset='bbh'
 
@@ -56,4 +56,4 @@ python run_choice.py \
   --model $model \
   --shots 8 \
   --dataset $dataset \
-  --form short
+  --form short:step
