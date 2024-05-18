@@ -16,7 +16,7 @@ python run_open.py \
   --model $model \
   --shots 4 \
   --dataset $dataset \
-  --form short:step
+  --form short
 
 dataset='gsm8k'
 
@@ -40,7 +40,7 @@ python run_choice.py \
   --model $model \
   --shots 5 \
   --dataset $dataset \
-  --form short:step
+  --form short
 
 dataset='bbh'
 
@@ -48,7 +48,7 @@ python run_open.py \
   --model $model \
   --shots 3 \
   --dataset $dataset \
-  --form short
+  --form short:step
 
 dataset='arc'
 
