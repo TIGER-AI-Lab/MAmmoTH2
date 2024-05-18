@@ -32,7 +32,7 @@ python run_choice.py \
   --model $model \
   --shots 5 \
   --dataset $dataset \
-  --form short
+  --form short:step
 
 dataset='mmlu_stem'
 
