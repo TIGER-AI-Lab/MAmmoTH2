@@ -710,55 +710,33 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                                     <td>46.4</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="9" style="text-align:center"><strong>Trained only with WebInstruct (All evaluations are held-out)</strong></td>
-                                <tr> 
-                                    <tr>
-                                        <td>MAmmoTH2-34B</td>
-                                        <td>30.4</td>
-                                        <td>35.0</td>
-                                        <td>75.6</td>
-                                        <td>31.8</td>
-                                        <td>64.5</td>
-                                        <td>68.0</td>
-                                        <td>90.0</td>
-                                        <td>56.4</td>
-                                      </tr>
-                                      <tr bgcolor="#E0FFFF">
-                                        <td>∆ over <u>Yi</u></td>
-                                        <td>+7.2</td>
-                                        <td>+19.1</td>
-                                        <td>+7.7</td>
-                                        <td>+2.1</td>
-                                        <td>+2.9</td>
-                                        <td>+1.2</td>
-                                        <td>+0.5</td>
-                                        <td>+5.8</td>
-                                      </tr>
-                                      <tr>
-                                        <td>MAmmoTH2-8x7B</td>
-                                        <td>32.2</td>
-                                        <td>39.0</td>
-                                        <td>75.4</td>
-                                        <td>36.8</td>
-                                        <td>67.4</td>
-                                        <td>71.1</td>
-                                        <td>87.5</td>
-                                        <td>58.9</td>
-                                      </tr>
-                                      <tr bgcolor="#E0FFFF">
-                                        <td>∆ over <u>Mixtral</u></td>
-                                        <td>+9.2</td>
-                                        <td>+10.6</td>
-                                        <td>+1.0</td>
-                                        <td>+7.1</td>
-                                        <td>+7.4</td>
-                                        <td>+3.3</td>
-                                        <td>+2.8</td>
-                                        <td>+6.5</td>
-                                      </tr>
-                                    <tr>
-                                        <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K</strong></td>
-                                    <tr>  
+                                <td colspan="9" style="text-align:center"><strong>Trained only with WebInstruct (All evaluations are held-out)</strong></td>
+                                </tr> 
+                                <tr>
+                                    <td>MAmmoTH2-34B</td>
+                                    <td>30.4</td>
+                                    <td>35.0</td>
+                                    <td>75.6</td>
+                                    <td>31.8</td>
+                                    <td>64.5</td>
+                                    <td>68.0</td>
+                                    <td>90.0</td>
+                                    <td>56.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MAmmoTH2-8x7B</td>
+                                    <td>32.2</td>
+                                    <td>39.0</td>
+                                    <td>75.4</td>
+                                    <td>36.8</td>
+                                    <td>67.4</td>
+                                    <td>71.1</td>
+                                    <td>87.5</td>
+                                    <td>58.9</td>
+                                  </tr>
+                                        <tr>
+                                            <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K</strong></td>
+                                        </tr>
                                         <tr>
                                             <td>MAmmoTH2-8x7B-Plus</td>
                                             <td><strong>34.1</strong></td>
@@ -770,20 +748,9 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                                             <td><strong>88.4</strong></td>
                                             <td><strong>62.9</strong></td>
                                           </tr>
-                                          <tr bgcolor="#E0FFFF">
-                                            <td>∆ over Qwen-1.5-110B</td>
-                                            <td>-0.8</td>
-                                            <td>-2.6</td>
-                                            <td>+1.0</td>
-                                            <td>+1.5</td>
-                                            <td>-1.0</td>
-                                            <td>-0.7</td>
-                                            <td>-4.0</td>
-                                            <td>-0.7</td>
-                                          </tr>
-                                        <tr>
+                                            <tr>
                                             <td colspan="9" style="text-align:center"><strong>Parameter Size = 7B or 8B</strong></td>
-                                        <tr>
+                                            </tr>
                                             <tr>
                                                 <td>Deepseek-7B</td>
                                                 <td>15.7</td>
@@ -940,55 +907,55 @@ Eventually, we harvest 10M Q-A pairs as our final instruction-tuning dataset Web
                                             </tr>
                                             <tr>
                                                 <td colspan="9" style="text-align:center"><strong>Trained only with WebInstruct (All evaluations are held-out)</strong></td>
+                                            </tr>
                                             <tr>
-                                                <tr>
-                                                    <td>MAmmoTH2-7B</td>
-                                                    <td>29.0</td>
-                                                    <td>36.7</td>
-                                                    <td>68.4</td>
-                                                    <td>32.4</td>
-                                                    <td>62.4</td>
-                                                    <td>58.6</td>
-                                                    <td>81.7</td>
-                                                    <td>52.8</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>MAmmoTH2-8B</td>
-                                                    <td>32.2</td>
-                                                    <td>35.8</td>
-                                                    <td>70.4</td>
-                                                    <td>35.2</td>
-                                                    <td>64.2</td>
-                                                    <td>62.1</td>
-                                                    <td>82.2</td>
-                                                    <td>54.3</td>
-                                                  </tr>
-                                                    <tr>
-                                                       <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K)</strong></td>
-                                                    <tr>
-                                                    <tr>
-                                                        <td>MAmmoTH2-7B-Plus</td>
-                                                        <td>29.2</td>
-                                                        <td><strong>45.0</strong></td>
-                                                        <td><strong>84.7</strong></td>
-                                                        <td>36.8</td>
-                                                        <td>64.5</td>
-                                                        <td>63.1</td>
-                                                        <td>83.0</td>
-                                                        <td>58.0</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>MAmmoTH2-8B-Plus</td>
-                                                        <td><strong>32.5</strong></td>
-                                                        <td>42.8</td>
-                                                        <td>84.1</td>
-                                                        <td><strong>37.3</strong></td>
-                                                        <td><strong>65.7</strong></td>
-                                                        <td><strong>67.8</strong></td>
-                                                        <td><strong>83.4</strong></td>
-                                                        <td><strong>59.1</strong></td>
-                                                    </tr>
-                                                </table>
+                                                <td>MAmmoTH2-7B</td>
+                                                <td>29.0</td>
+                                                <td>36.7</td>
+                                                <td>68.4</td>
+                                                <td>32.4</td>
+                                                <td>62.4</td>
+                                                <td>58.6</td>
+                                                <td>81.7</td>
+                                                <td>52.8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MAmmoTH2-8B</td>
+                                                <td>32.2</td>
+                                                <td>35.8</td>
+                                                <td>70.4</td>
+                                                <td>35.2</td>
+                                                <td>64.2</td>
+                                                <td>62.1</td>
+                                                <td>82.2</td>
+                                                <td>54.3</td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="9" style="text-align:center"><strong>Continue trained with additional instruction datasets (All held-out except MATH and GSM8K)</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>MAmmoTH2-7B-Plus</td>
+                                                <td>29.2</td>
+                                                <td><strong>45.0</strong></td>
+                                                <td><strong>84.7</strong></td>
+                                                <td>36.8</td>
+                                                <td>64.5</td>
+                                                <td>63.1</td>
+                                                <td>83.0</td>
+                                                <td>58.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MAmmoTH2-8B-Plus</td>
+                                                <td><strong>32.5</strong></td>
+                                                <td>42.8</td>
+                                                <td>84.1</td>
+                                                <td><strong>37.3</strong></td>
+                                                <td><strong>65.7</strong></td>
+                                                <td><strong>67.8</strong></td>
+                                                <td><strong>83.4</strong></td>
+                                                <td><strong>59.1</strong></td>
+                                            </tr>
+                                            </table>
                             </tbody>
                             <capion>Table 2: Our main results on various science reasoning datasets. All the models without ‘-Instruct’
                                 refers to the released base model before instruction tuning. For the experimental results, if they are
