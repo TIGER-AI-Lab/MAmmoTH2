@@ -24,7 +24,7 @@ bash run_7B_moe_plus.sh
 ## To reproduce the results on the new MMLU-Pro dataset
 ```
 model='TTIGER-Lab/MAmmoTH2-8B-Plus'
-python run_choice.py   --model $model   --shots 5   --dataset mmlu_pro   --form short:step
+python run_choice.py   --model $model   --shots 5   --dataset mmlu_pro   --form short
 ```
 
 The results will fluctuate depending on the library version and devices. We run on A100 cards and use the library provided in requirements.txt.
