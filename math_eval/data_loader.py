@@ -1,9 +1,9 @@
 import json
 from utils import delete_extra_zero,_strip_string
 from statistics import mean
-import re,random
+import re
+import random
 import glob
-
 
 IGNORE_INDEX = -100
 DEFAULT_PAD_TOKEN = "[PAD]"
@@ -259,8 +259,16 @@ def data_reader(dataset: str):
     return questions, answers, tasks
 
 class BatchDatasetLoader:
-    def __init__(self, dataset: str, batch_size: int):
-        self.inputs, self.outputs, self.tasks = data_reader(dataset)
+    def __init__(self, dataset: str, batch_size: int, task: str = '.'):
+        inputs, outputs, tasks = data_reader(dataset)
+
+        self.inputs, self.outputs, self.tasks = [], [], []
+        for q, g, t in zip(inputs, outputs, tasks):
+            if re.search(task, t):
+                self.inputs.append(q)
+                self.outputs.append(g)
+                self.tasks.append(t)
+
         self.index = 0
         self.batch_size = batch_size
         self.length = len(self.inputs)

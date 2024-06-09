@@ -8,12 +8,14 @@ import utils
 from prompt_utils import *
 from data_loader import BatchDatasetLoader
 from vllm import LLM, SamplingParams
+import re
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", default='', type=str)
 parser.add_argument("--output", default='', type=str)
 parser.add_argument("--shots", default=0, type=int)
 parser.add_argument("--dtype", default='bfloat16', type=str)
+parser.add_argument("--task", default='.', type=str)
 parser.add_argument("--load_8bit", action='store_true', default=False)
 parser.add_argument("--batch_size", default=8, type=int)
 parser.add_argument("--print", action='store_true', default=False)
@@ -63,19 +65,18 @@ if __name__ == "__main__":
 
     correct, wrong = 0, 0
     if not args.output:
-        suffix = 'CoT'
         filename = args.model.strip('/').split('/')[-1].replace('-', '_')
         if filename.startswith('checkpoint'):
             filename = args.model.strip('/').split('/')[-2].replace('-', '_') + '__' + filename
         filename = filename + '_' + args.dataset
         filename += '_' + f'{args.shots}shots' + '_' + args.form
         filename += f'_length{args.model_max_length}'
-        filename += '_' + f'bs{args.batch_size}' + '_' + suffix
+        filename += f'_task{args.task}'
         args.output = f'outputs/{filename}.jsonl'
         print('Writing the output to', args.output)
 
     file_handle = open(args.output, 'w')
-    loader = BatchDatasetLoader(args.dataset, -1)
+    loader = BatchDatasetLoader(args.dataset, -1, args.task)
 
     match_answer_count, pot, cot = 0, 0, 0
 

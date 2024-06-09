@@ -13,6 +13,7 @@ parser.add_argument("--model", default='', type=str)
 parser.add_argument("--output", default='', type=str)
 parser.add_argument("--dtype", default='bfloat16', type=str)
 parser.add_argument("--dataset", required=True, type=str)
+parser.add_argument("--task", default='.', type=str)
 parser.add_argument("--form", default='alpaca', type=str)
 parser.add_argument("--shots", default=0, type=int)
 parser.add_argument("--print", action='store_true', default=False)
@@ -64,19 +65,18 @@ if __name__ == "__main__":
 
     correct, wrong = 0, 0
     if not args.output:
-        suffix = 'CoT'
         filename = args.model.strip('/').split('/')[-1].replace('-', '_')
         if filename.startswith('checkpoint'):
             filename = args.model.strip('/').split('/')[-2].replace('-', '_') + '__' + filename
         filename = filename + '_' + args.dataset
         filename += '_' + f'{args.shots}shots' + '_' + args.form
         filename += f'_length{args.model_max_length}'
-        filename += '_' + suffix
+        filename += f'_task{args.task}'
         args.output = f'outputs/{filename}.jsonl'
         print('Writing the output to', args.output)
 
     file_handle = open(args.output, 'w')
-    loader = BatchDatasetLoader(args.dataset, -1)
+    loader = BatchDatasetLoader(args.dataset, -1, args.task)
 
     questions, groundtruths, tasks = loader[0]
     processed_questions = utils.process_question_with_flan_tag(questions, '')
