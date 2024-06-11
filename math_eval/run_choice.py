@@ -8,7 +8,9 @@ import utils
 from prompt_utils import *
 from data_loader import BatchDatasetLoader
 from vllm import LLM, SamplingParams
+from vllm.lora.request import LoRARequest
 import re
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", default='', type=str)
@@ -22,6 +24,7 @@ parser.add_argument("--print", action='store_true', default=False)
 parser.add_argument("--form", default='alpaca_mc', type=str)
 parser.add_argument("--model_max_length", default=2048, type=int)
 parser.add_argument("--dataset", required=True, type=str)
+parser.add_argument("--lora", default='', type=str)
 
 args = parser.parse_args()
 
@@ -34,7 +37,11 @@ def run_question_answer(questions: list, groundtruths: list, tasks: list):
     prompt_prefixs = [get_prompt(example, args.form) for example in used_examples]
     input_strs = [p[0] + p[1].format(query=q) for p, q in zip(prompt_prefixs, questions)]
 
-    outputs = llm.generate(input_strs, sampling_params)
+    if args.lora:
+        outputs = llm.generate(input_strs, sampling_params, lora_request=LoRARequest("adapter", 1, args.lora))
+    else:
+        outputs = llm.generate(input_strs, sampling_params)
+
     outputs = [output.outputs[0].text for output in outputs]
 
     # We need to collect the values and possibly the rerun questions;
@@ -56,11 +63,12 @@ def run_question_answer(questions: list, groundtruths: list, tasks: list):
 
 
 if __name__ == "__main__":
-    # Load model directly
     stop_tokens = ["USER:", "ASSISTANT:",  "### Instruction:", "Response:", "<start_of_turn>", "[INST]", "\n\nProblem", "\nProblem", "Problem:", "<|eot_id|>", "####"]
     sampling_params = SamplingParams(temperature=0, top_p=1, max_tokens=args.model_max_length, stop=stop_tokens)
-    llm = LLM(model=args.model, tensor_parallel_size=torch.cuda.device_count(), dtype=args.dtype, trust_remote_code=True)
-    args.batch_size = -1
+
+    llm = LLM(model=args.model, tensor_parallel_size=torch.cuda.device_count(), 
+              dtype=args.dtype, trust_remote_code=True, 
+              enable_lora=True if args.lora else False)
     print('Using VLLM, we do not need to set batch size!')
 
     correct, wrong = 0, 0
