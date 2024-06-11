@@ -35,12 +35,14 @@ def func(filename: str):
             overall_correct += correct
             overall_wrong += wrong
             print(filename, '###', task, '###', f'accuracy={correct / (correct + wrong)}', f'fail={fail}')
-        print(filename,
-              '###',
-              'overall accuracy=',
-              overall_correct / (overall_correct + overall_wrong),
-              '###',
-              f'length={overall_correct + overall_wrong}')
+
+        if len(tasks) > 1:
+            print(filename,
+                '###',
+                'overall accuracy=',
+                overall_correct / (overall_correct + overall_wrong),
+                '###',
+                f'length={overall_correct + overall_wrong}')
     else:
         print(filename, ' is Empty!')
 
