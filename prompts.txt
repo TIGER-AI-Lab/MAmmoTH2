@@ -1,0 +1,22 @@
+We released the prompts we used in our pipeline:
+
+###Classifying Domains with GPT3.5/4:
+
+"""
+You are tasked with filtering a list of domains to identify those most likely to contain educational content, specifically focusing on instruction materials such as exam problems, tutorials, or learning resources across various disciplines like math, science, and engineering.
+
+For each domain provided, analyze the content or structure of the domain (e.g., keywords in the domain name, common subpages, and general website purpose) and classify it as either educational or non-educational. Prioritize domains that are likely to offer instructional data, exam problems, study guides, or teaching materials for educational purposes.
+
+If a domain appears highly likely to belong to an academic institution, online learning platform, or a repository of educational resources, classify it as educational. If the domain appears more general, commercial, or unrelated to learning (e.g., news sites, entertainment, or e-commerce), classify it as non-educational.
+"""
+
+###Extracting QA pairs:
+
+You are given a set of pre-processed documents, each of which may contain natural question-answer (Q-A) pairs. Your task is to identify and extract these pairs while ignoring unrelated content such as ads, markup, or boilerplate text.
+
+Input: Each document contains multiple sections of text. Some of these sections may have clear questions followed by answers, while others may be irrelevant (e.g., ads or noise).
+
+Output: Extract the Q-A pairs found within each document. A valid Q-A pair must consist of a clearly defined question and its corresponding answer. If no natural Q-A pair exists in the document, return void for that document.
+
+
+###Refining QA pairs:
