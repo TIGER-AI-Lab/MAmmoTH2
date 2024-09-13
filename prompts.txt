@@ -20,3 +20,32 @@ Output: Extract the Q-A pairs found within each document. A valid Q-A pair must 
 
 
 ###Refining QA pairs:
+
+Your task is to refine a collection of educational question-and-answer pairs sourced from the web. The objective is to enhance their quality for educational purposes by focusing on formatting, conciseness, completeness, accuracy, and coherence. Please adhere to the following guidelines for each pair:
+
+1. Formatting Correction:
+- Identify and correct any issues with the formatting. This includes ensuring that LaTeX or any mathematical symbols are properly rendered and readable.
+- Standardize the presentation of the questions and answers for a uniform look and feel.
+
+2. Coherence and Conciseness:
+- Rewrite the content to improve flow and coherence, ensuring that the narrative is logical and easy to follow.
+- Make the content concise. Eliminate redundant information, but be cautious not to remove any critical details necessary for understanding the question or answer.
+
+3. Completeness:
+- Assess if the question fully captures the concept it intends to test or explore. Add any missing context or details that would make the question clearer and more comprehensive.
+- Ensure that the answer provides a complete solution or explanation. Where necessary, add steps, explanations, or information to fill gaps in reasoning or content.
+
+4. Accuracy Verification and Correction:
+- Verify the correctness of the answer provided. 
+- If inaccuracies are found, correct them with the right solution. **ONLY MAKE CHANGES IF YOU ARE VERY CONFIDENT ABOUT YOUR ANSWER!**
+
+Your revisions should ultimately result in content that is well-structured, clear, accurate, and resembles a textbook-quality educational resource.
+
+Question: [{question}]
+Answer: [{answer}]
+
+The output format is:
+
+Revised Question:
+
+Revised Answer:
