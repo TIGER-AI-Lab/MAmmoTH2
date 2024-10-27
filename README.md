@@ -53,7 +53,7 @@ Please cite our paper if you use our data, model or code. Please also kindly cit
 @article{yue2024mammoth2,
   title={MAmmoTH2: Scaling Instructions from the Web},
   author={Yue, Xiang and Zheng, Tuney and Zhang, Ge and Chen, Wenhu},
-  journal={arXiv preprint arXiv:2405.03548},
+  journal={Advances in Neural Information Processing Systems},
   year={2024}
 }
 ```
